@@ -1686,6 +1686,7 @@ body {
         </div>
     </section>
 
+<!-- Модальное окно галереи -->
 <div id="galleryModal" class="gallery-modal">
     <div class="gallery-modal-content">
         <button class="gallery-close" onclick="closeGalleryModal()">&times;</button>
@@ -1695,9 +1696,6 @@ body {
         <!-- Упрощенные фильтры -->
         <div class="gallery-filters">
             <button class="filter-btn active" onclick="filterGallery('all')" data-translate="filter-all">Всі роботи</button>
-            <button class="filter-btn" onclick="filterGallery('furniture')" data-translate="filter-furniture">Хімчистка</button>
-            <button class="filter-btn" onclick="filterGallery('windows')" data-translate="filter-windows">Фасади</button>
-            <button class="filter-btn" onclick="filterGallery('general')" data-translate="filter-general">Уборка</button>
         </div>
         
         <!-- Сетка галереи -->
@@ -1720,19 +1718,11 @@ body {
                     <div class="video-fallback" style="display:none;">
                         <div class="fallback-content">
                             <span class="fallback-icon">🎥</span>
-                            <span class="fallback-text">Професійне прибирання</span>
                         </div>
                     </div>
                     
                     <div class="media-overlay video-overlay">🎥 Відео</div>
                     <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
-                </div>
-                <div class="gallery-item-content">
-                    <h3 data-translate="gallery-item-1-title">Професійне прибирання</h3>
-                    <div class="gallery-item-tags">
-                        <span class="tag">Уборка</span>
-                        <span class="tag">Процес</span>
-                    </div>
                 </div>
             </div>
 
@@ -1747,18 +1737,10 @@ body {
                     <div class="image-fallback" style="display:none;">
                         <div class="fallback-content">
                             <span class="fallback-icon">📸</span>
-                            <span class="fallback-text">Результат хімчистки</span>
                         </div>
                     </div>
                     
                     <div class="media-overlay image-overlay">📸 Фото</div>
-                </div>
-                <div class="gallery-item-content">
-                    <h3 data-translate="gallery-item-2-title">Результат хімчистки</h3>
-                    <div class="gallery-item-tags">
-                        <span class="tag">Хімчистка</span>
-                        <span class="tag">Результат</span>
-                    </div>
                 </div>
             </div>
 
@@ -1779,19 +1761,11 @@ body {
                     <div class="video-fallback" style="display:none;">
                         <div class="fallback-content">
                             <span class="fallback-icon">🎥</span>
-                            <span class="fallback-text">Хімчистка меблів</span>
                         </div>
                     </div>
                     
                     <div class="media-overlay video-overlay">🎥 Відео</div>
                     <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
-                </div>
-                <div class="gallery-item-content">
-                    <h3 data-translate="gallery-item-3-title">Хімчистка меблів</h3>
-                    <div class="gallery-item-tags">
-                        <span class="tag">Хімчистка</span>
-                        <span class="tag">Меблі</span>
-                    </div>
                 </div>
             </div>
 
@@ -1812,19 +1786,11 @@ body {
                     <div class="video-fallback" style="display:none;">
                         <div class="fallback-content">
                             <span class="fallback-icon">🎥</span>
-                            <span class="fallback-text">Прибирання офісу</span>
                         </div>
                     </div>
                     
                     <div class="media-overlay video-overlay">🎥 Відео</div>
                     <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
-                </div>
-                <div class="gallery-item-content">
-                    <h3 data-translate="gallery-item-4-title">Прибирання офісу</h3>
-                    <div class="gallery-item-tags">
-                        <span class="tag">Уборка</span>
-                        <span class="tag">Офіс</span>
-                    </div>
                 </div>
             </div>
 
@@ -1852,12 +1818,31 @@ body {
                     <div class="media-overlay video-overlay">🎥 Відео</div>
                     <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
                 </div>
-                <div class="gallery-item-content">
-                    <h3 data-translate="gallery-item-5-title">Миття фасадів</h3>
-                    <div class="gallery-item-tags">
-                        <span class="tag">Фасади</span>
-                        <span class="tag">Вікна</span>
+            </div>
+
+            <!-- 5. Видео мойки окон/фасадов -->
+            <div class="gallery-item" data-category="windows" data-type="video" onclick="openFullscreen(4)">
+                <div class="gallery-item-media">
+                    <video 
+                        src="img/5.mp4"
+                        muted 
+                        preload="metadata"
+                        playsinline
+                        webkit-playsinline
+                        loop
+                        onloadedmetadata="this.playbackRate = 2.0;">
+                        <source src="img/5.mp4" type="video/mp4">
+                    </video>
+                    
+                    <div class="video-fallback" style="display:none;">
+                        <div class="fallback-content">
+                            <span class="fallback-icon">🎥</span>
+                            <span class="fallback-text">Миття фасадів</span>
+                        </div>
                     </div>
+                    
+                    <div class="media-overlay video-overlay">🎥 Відео</div>
+                    <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
                 </div>
             </div>
 
@@ -1886,13 +1871,6 @@ body {
                     <div class="media-overlay video-overlay">🎥 Відео</div>
                     <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
                 </div>
-                <div class="gallery-item-content">
-                    <h3 data-translate="gallery-item-6-title">Прибирання після ремонту</h3>
-                    <div class="gallery-item-tags">
-                        <span class="tag">Уборка</span>
-                        <span class="tag">Ремонт</span>
-                    </div>
-                </div>
             </div>
 
             <!-- 7. Комплексное видео уборки -->
@@ -1918,13 +1896,6 @@ body {
                     
                     <div class="media-overlay video-overlay">🎥 Відео</div>
                     <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
-                </div>
-                <div class="gallery-item-content">
-                    <h3 data-translate="gallery-item-7-title">Комплексне прибирання</h3>
-                    <div class="gallery-item-tags">
-                        <span class="tag">Уборка</span>
-                        <span class="tag">Комплексне</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1956,6 +1927,7 @@ body {
         </div>
     </div>
 </div>
+
 
 <!-- Модальное окно с дополнительными услугами -->
 <div id="servicesModal" class="modal">
