@@ -625,6 +625,7 @@ body {
 }
 
 /* Секция преимуществ */
+/* Секция преимуществ */
 .advantages {
     padding: 5rem 0;
     background: var(--primary-dark);
@@ -632,37 +633,56 @@ body {
 
 .advantages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
 .advantage-item {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 1rem 2rem 2rem; /* еще меньше справа */
     background: rgba(37, 99, 235, 0.1);
-    border-radius: 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(37, 99, 235, 0.2);
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .advantage-item:hover {
     background: rgba(37, 99, 235, 0.2);
-    transform: translateX(10px);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+    border-color: var(--light-blue);
 }
 
 .advantage-number {
-    background: var(--light-blue);
+    background: linear-gradient(45deg, var(--light-blue), var(--accent-blue));
     color: var(--white);
-    width: 50px;
-    height: 50px;
+    min-width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+    flex-shrink: 0;
+}
+
+.advantage-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.advantage-content p {
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Форма контактов */
@@ -1174,10 +1194,15 @@ body {
     }
 
     .advantage-item {
-        padding: 1rem;
-        flex-direction: column;
-        text-align: center;
-        gap: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 1rem 2rem 2rem; /* еще меньше справа */
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
     }
 
     .advantage-item:hover {
@@ -1936,24 +1961,28 @@ body {
 <div id="servicesModal" class="modal">
     <div class="modal-content">
         <button class="close-modal" onclick="closeModal()">&times;</button>
-        <h3 data-translate="modal-title">Додаткові послуги Chisto Sofa</h3>
+        <h3 data-translate="modal-title">послуги Chisto Sofa</h3>
         <div class="additional-services">
-            <div class="modal-services-row">
-                <div class="modal-service-card">
-                    <div class="modal-service-icon">🏠</div>
-                    <div class="modal-service-title" data-translate="modal-general-title">Генеральне прибирання від Chisto Sofa</div>
-                    <div class="modal-service-desc" data-translate="modal-general-desc">Генеральне прибирання — це глибоке очищення вашого простору з увагою до кожної деталі. Ми працюємо з душею, дотримуючись високих стандартів чистоти, щоб ваш дім сяяв свіжістю.</div>
-                    <div class="modal-service-section">
-                        <h5 data-translate="modal-general-rooms">🛋 У кімнатах:</h5>
-                        <ul class="modal-service-list">
-                            <li data-translate="modal-general-rooms-1">Знепилювання стін та стелі</li>
-                            <li data-translate="modal-general-rooms-2">Вологе протирання: карнизів, підвіконь, батарей, вимикачів, розеток, дверей, меблів і техніки</li>
-                            <li data-translate="modal-general-rooms-3">Відсовуємо легкі меблі — миємо за ними</li>
-                            <li data-translate="modal-general-rooms-4">Поліруємо дзеркала та скляні поверхні</li>
-                            <li data-translate="modal-general-rooms-5">Пилососимо, миємо підлогу та плінтус</li>
-                            <li data-translate="modal-general-rooms-6">Виносимо сміття в місце утилізації</li>
-                        </ul>
-                    </div>
+            <div class="modal-service-card">
+    <div class="modal-service-icon">🏠</div>
+    <div class="modal-service-title" data-translate="modal-general-title">Генеральне прибирання від Chisto Sofa</div>
+    <div class="modal-service-desc" data-translate="modal-general-desc">Генеральне прибирання — це глибоке очищення вашого простору з увагою до кожної деталі. Ми працюємо з душею, дотримуючись високих стандартів чистоти, щоб ваш дім сяяв свіжістю.</div>
+    
+    <div class="modal-service-section">
+        <h4 class="modal-service-subtitle" data-translate="modal-general-what-included">Що входить у послугу генерального прибирання?</h4>
+    </div>
+
+    <div class="modal-service-section">
+        <h5 data-translate="modal-general-rooms">🛋 У кімнатах:</h5>
+        <ul class="modal-service-list">
+            <li data-translate="modal-general-rooms-1">Знепилювання стін та стелі</li>
+            <li data-translate="modal-general-rooms-2">Вологе протирання: карнизів, підвіконь, батарей, вимикачів, розеток, дверей, меблів і техніки</li>
+            <li data-translate="modal-general-rooms-3">Відсовуємо легкі меблі — миємо за ними</li>
+            <li data-translate="modal-general-rooms-4">Поліруємо дзеркала та скляні поверхні</li>
+            <li data-translate="modal-general-rooms-5">Пилососимо, миємо підлогу та плінтус</li>
+            <li data-translate="modal-general-rooms-6">Виносимо сміття в місце утилізації</li>
+        </ul>
+    </div>
                     <div class="modal-service-section">
                         <h5 data-translate="modal-general-kitchen">🍳 У кухні:</h5>
                         <ul class="modal-service-list">
@@ -2146,55 +2175,21 @@ body {
     </div>
 </div>
     <!-- Секция преимуществ -->
-    <section id="advantages" class="advantages">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll" data-translate="advantages-title">Чому обирають нас</h2>
-            <div class="advantages-grid">
-                <div class="advantage-item animate-on-scroll">
-                    <div class="advantage-number">1</div>
-                    <div>
-                        <h3 data-translate="advantage-1-title">Професійна команда</h3>
-                        <p data-translate="advantage-1-desc">Досвідчені фахівці з сертифікатами та багаторічним досвідом роботи</p>
-                    </div>
-                </div>
-                <div class="advantage-item animate-on-scroll">
-                    <div class="advantage-number">2</div>
-                    <div>
-                        <h3 data-translate="advantage-2-title">Сучасне обладнання</h3>
-                        <p data-translate="advantage-2-desc">Використовуємо найновіше професійне обладнання для досягнення ідеального результату</p>
-                    </div>
-                </div>
-                <div class="advantage-item animate-on-scroll">
-                    <div class="advantage-number">3</div>
-                    <div>
-                        <h3 data-translate="advantage-3-title">Екологічні засоби</h3>
-                        <p data-translate="advantage-3-desc">Застосовуємо безпечні для здоров'я та довкілля миючі засоби</p>
-                    </div>
-                </div>
-                <div class="advantage-item animate-on-scroll">
-                    <div class="advantage-number">4</div>
-                    <div>
-                        <h3 data-translate="advantage-4-title">Гарантія якості</h3>
-                        <p data-translate="advantage-4-desc">Гарантуємо високу якість наших послуг та готові переробити при необхідності</p>
-                    </div>
-                </div>
-                <div class="advantage-item animate-on-scroll">
-                    <div class="advantage-number">5</div>
-                    <div>
-                        <h3 data-translate="advantage-5-title">Доступні ціни</h3>
-                        <p data-translate="advantage-5-desc">Пропонуємо конкурентні ціни та гнучку систему знижок для постійних клієнтів</p>
-                    </div>
-                </div>
-                <div class="advantage-item animate-on-scroll">
-                    <div class="advantage-number">6</div>
-                    <div>
-                        <h3 data-translate="advantage-6-title">Швидкість виконання</h3>
-                        <p data-translate="advantage-6-desc">Виконуємо роботу якісно та в встановлені терміни без затримок</p>
-                    </div>
+<section id="advantages" class="advantages">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll" data-translate="advantages-title">Чому обирають нас</h2>
+        <div class="advantages-grid">
+            <div class="advantage-item animate-on-scroll">
+                <div class="advantage-number">1</div>
+                <div class="advantage-content">
+                    <h3 data-translate="advantage-1-title">Гарантія якості</h3>
+                    <p data-translate="advantage-1-desc">Гарантуємо високу якість наших послуг та готові переробити при необхідності</p>
                 </div>
             </div>
+            
         </div>
-    </section>
+    </div>
+</section>
 
 
    <!-- Форма контактов -->
