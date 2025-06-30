@@ -1581,6 +1581,7 @@ body {
         <li><a href="#contact" class="nav-link" data-translate="nav-contact">Контакти</a></li>
         <!-- В меню nav-menu добавить пункт -->
         <li><a href="#gallery" class="nav-link" onclick="openGalleryModal()" data-translate="nav-gallery">Галерея</a></li>
+        <li><a href="#about" class="nav-link" data-translate="nav-about">Про компанію</a></li>
         <li class="language-switcher">
           <button class="language-btn" onclick="toggleLanguageDropdown()">
             <span id="currentLang">🇺🇦 UA</span>
@@ -1685,6 +1686,36 @@ body {
             </div>
         </div>
     </section>
+
+
+<!-- Модальне вікно "Про компанію" -->
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeAboutModal()">&times;</button>
+        <h3 data-translate="about-title">Про нас</h3>
+        <p data-translate="about-intro">
+            Ми — <strong>«Chisto Sofa»</strong>. Ми любимо чистоту. І ми вміємо її створювати.
+        </p>
+        <p data-translate="about-experience">
+            Ми працюємо не так давно, але досвіду у нас більше, ніж у багатьох на ринку. За плечима — реальні 3+ роки роботи, сотні прибраних домівок, десятки задоволених клієнтів, які радять нас друзям і повертаються знову.
+        </p>
+        <p data-translate="about-mission">
+            Ми не просто прибираємо — ми змінюємо атмосферу у вашому домі. Там, де ще вчора було брудно, сьогодні — свіжо, затишно і спокійно. Там, де був хаос після ремонту — з'являється простір для життя.
+        </p>
+        <p data-translate="about-team">
+            Ми молода команда, але в кожного з нас — велике бажання зробити свою справу якісно. Бо кожен диван, кожна кухня чи вітальня для нас — як своя.
+        </p>
+        <p data-translate="about-values">
+            Ми чесні, відкриті, пунктуальні й уважні до деталей. Нам важливо не просто виконати роботу, а щоб ви сказали:
+        </p>
+        <blockquote>
+            <em data-translate="about-quote">"Ого, я навіть не думав(ла), що може бути настільки чисто!"</em>
+        </blockquote>
+        <p data-translate="about-philosophy">
+            Ми віримо: якщо робити з душею — то це відчувається. Спробуйте один раз — і ви більше не шукатимете інших.
+        </p>
+    </div>
+</div>
 
 <!-- Модальное окно галереи -->
 <div id="galleryModal" class="gallery-modal">
@@ -2287,6 +2318,9 @@ body {
 </footer>
 
     <script>
+
+
+
 // Получаем элементы меню
 const toggle = document.getElementById('mobileToggle');
 const navMenu = document.getElementById('navMenu');
@@ -2892,7 +2926,86 @@ const translations = {
         });
 
 
+// ===== МОДАЛЬНОЕ ОКНО "ПРО КОМПАНІЮ" =====
 
+function openAboutModal() {
+    const modal = document.getElementById('aboutModal');
+    if (modal) {
+        modal.style.display = 'block';
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        if (typeof closeMobileMenu === 'function') {
+            closeMobileMenu();
+        }
+    }
+}
+
+function closeAboutModal() {
+    const modal = document.getElementById('aboutModal');
+    if (modal) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+}
+
+function initAboutModal() {
+    // Настройка навигационной ссылки
+    const aboutLink = document.querySelector('a[href="#about"]');
+    if (aboutLink) {
+        aboutLink.removeAttribute('onclick');
+        aboutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openAboutModal();
+        });
+    }
+
+    // Настройка кнопки закрытия
+    const closeBtn = document.querySelector('#aboutModal .close-modal');
+    if (closeBtn) {
+        closeBtn.removeAttribute('onclick');
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeAboutModal();
+        });
+    }
+
+    // Закрытие при клике вне модального окна
+    const modal = document.getElementById('aboutModal');
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeAboutModal();
+            }
+        });
+
+        const modalContent = modal.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+    }
+
+    // Закрытие по Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const modal = document.getElementById('aboutModal');
+            if (modal && modal.style.display === 'block') {
+                closeAboutModal();
+            }
+        }
+    });
+}
+
+// Инициализация About Modal
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(initAboutModal, 100);
+});
     
 
   
