@@ -16,7 +16,7 @@
     --text-light: #f8fafc;
     --text-gray: #cbd5e1;
     --white: #ffffff;
-    --gradient: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #00BCD4 100%);
 }
 
 /* Сброс стилей и базовые настройки */
@@ -190,17 +190,18 @@ body {
 
 /* Главная секция */
 .hero {
-    height: 100vh;
-    background: var(--gradient);
+    min-height: 100vh !important;
+    background: url('img/chisto-sofa-bg.jpg') center/cover no-repeat red !important;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding: 0 1rem;
+    padding: 2rem 1rem !important;
 }
 
+/* Анимированный фон с частицами */
 .hero::before {
     content: '';
     position: absolute;
@@ -208,64 +209,286 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') !important;
+    opacity: 0.4;
+    animation: float 8s ease-in-out infinite;
+    
+
+    
 }
 
+/* Плавающие иконки */
+.floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.3;
+    animation: floatIcon 6s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.floating-icon:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.floating-icon:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+.floating-icon:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 2s; }
+.floating-icon:nth-child(4) { top: 60%; right: 10%; animation-delay: 3s; }
+.floating-icon:nth-child(5) { bottom: 15%; right: 25%; animation-delay: 4s; }
+.floating-icon:nth-child(6) { top: 35%; left: 5%; animation-delay: 5s; }
+
+/* Основной контент */
 .hero-content {
-    max-width: 800px;
-    padding: 0 2rem;
+    max-width: 900px !important;
+    padding: 3rem 2rem !important;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px) !important;
+    border-radius: 25px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    animation: slideInUp 1s ease-out;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 1s ease;
+    font-size: 3.5rem !important;
+    margin-bottom: 1.5rem !important;
+    color: #ffffff !important;
+    font-weight: 700;
     line-height: 1.2;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 .hero p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    color: var(--text-gray);
-    animation: fadeInUp 1s ease 0.2s both;
+    font-size: 1.4rem !important;
+    margin-bottom: 2.5rem !important;
+    color: rgba(255, 255, 255, 0.95) !important;
     line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    animation: fadeInUp 1s ease 0.3s both;
 }
 
+/* Кнопка с эффектами */
 .cta-button {
-    display: inline-block;
-    background: var(--light-blue);
-    color: var(--white);
-    padding: 1rem 2rem;
+    display: inline-block !important;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24) !important;
+    color: #ffffff !important;
+    padding: 1.2rem 3rem !important;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
-    transition: all 0.3s ease;
-    animation: fadeInUp 1s ease 0.4s both;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+    animation: pulse 2s infinite;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.cta-button::before {
-    content: '';
+/* Декоративные элементы */
+.decorative-elements {
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.cta-button:hover::before {
-    left: 100%;
+.decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: rotate 20s linear infinite;
 }
 
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: -5%;
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 10%;
+    right: -5%;
+    animation-delay: 5s;
+}
+
+.circle-3 {
+    width: 100px;
+    height: 100px;
+    top: 70%;
+    left: 80%;
+    animation-delay: 10s;
+}
+
+/* Превью услуг */
+.service-previews {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-preview {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    animation: bounce 2s ease-in-out infinite;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.service-preview:nth-child(1) { animation-delay: 0s; }
+.service-preview:nth-child(2) { animation-delay: 0.2s; }
+.service-preview:nth-child(3) { animation-delay: 0.4s; }
+.service-preview:nth-child(4) { animation-delay: 0.6s; }
+.service-preview:nth-child(5) { animation-delay: 0.8s; }
+
+.service-preview:hover {
+    transform: translateY(-10px) scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Статистика */
+.stats-overlay {
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+    transform: none;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: slideInRight 1.5s ease 0.8s both;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    text-align: center;
+    margin-bottom: 0;
+    color: white;
+    min-width: 60px;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 900;
+    display: block;
+    color: #ffffff;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Анимации */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(10deg); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px) translateY(-50%); }
+    to { opacity: 1; transform: translateX(0) translateY(-50%); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+    to { text-shadow: 0 4px 20px rgba(255,255,255,0.5), 0 4px 8px rgba(0,0,0,0.3); }
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4); }
+    50% { box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes countUp {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .stats-overlay {
+        position: static !important;
+        transform: none !important;
+        margin: 2rem auto 0;
+        max-width: 300px;
+    }
+
+    .service-previews {
+        height: 100px;
+        gap: 1rem;
+    }
+
+    .service-preview {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
 }
 
 /* Секция услуг */
@@ -1028,22 +1251,25 @@ body {
     /* Скрываем обычное меню и делаем мобильную версию */
     .nav-menu {
         position: fixed;
-        top: 100%;
+        top: 0;
         left: 0;
         width: 100%;
-        background: var(--primary-blue);
+        height: 100vh;
+        background: linear-gradient(135deg, var(--primary-blue) 0%, rgba(26, 54, 93, 0.95) 100%);
         flex-direction: column;
-        padding: 2rem 0;
-        gap: 1.5rem;
-        transform: translateY(-100%);
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        gap: 2rem;
+        transform: translateX(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
     }
 
     .nav-menu.active {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
         visibility: visible;
     }
@@ -1053,9 +1279,17 @@ body {
     }
 
     .nav-link {
-        font-size: 1.1rem;
-        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
         display: block;
+        color: #ffffff;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
     }
 
     /* Языковой переключатель в мобильной версии */
@@ -1110,44 +1344,72 @@ body {
         font-size: 1.4rem;
     }
 
-    /* ГЛАВНАЯ СЕКЦИЯ - КРИТИЧЕСКИ ВАЖНЫЕ ИЗМЕНЕНИЯ */
+    /* ГЛАВНАЯ СЕКЦИЯ - ИСПРАВЛЕННАЯ ВЕРСИЯ */
     .hero {
-        min-height: 100vh;
-        height: auto;
-        padding: 6rem 1rem 2rem;
+        min-height: 100vh !important;
+        background: linear-gradient(135deg, rgba(13, 20, 33, 0.8) 0%, rgba(26, 54, 93, 0.8) 50%, rgba(37, 99, 235, 0.6) 100%), url('img/chisto-sofa-bg.jpg') center/cover no-repeat !important;
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        padding: 2rem 1rem !important;
     }
 
     .hero-content {
-        max-width: 100%;
-        padding: 0 1rem;
-        width: 100%;
+        max-width: 95% !important;
+        padding: 1.5rem 1.2rem !important;
+        margin: 0 0.5rem;
+        position: relative;
+        z-index: 3;
+        background: rgba(13, 20, 33, 0.90) !important;
+        backdrop-filter: blur(15px) !important;
+        border-radius: 20px !important;
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.6);
+        animation: slideInUp 1s ease-out;
     }
 
-    /* РАЗМЕРЫ ТЕКСТА ДЛЯ МОБИЛЬНЫХ */
     .hero h1 {
-        font-size: 1.8rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 1rem;
+        font-size: 1.6rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 0.8rem;
+        color: #ffffff !important;
+        font-weight: 700;
+        text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        animation: glow 2s ease-in-out infinite alternate;
         word-wrap: break-word;
         hyphens: auto;
     }
 
     .hero p {
-        font-size: 1rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 1.5rem;
-        padding: 0 0.5rem;
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1.2rem;
+        color: rgba(255, 255, 255, 0.95) !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        padding: 0;
     }
 
     .cta-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
+        display: inline-block !important;
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24) !important;
+        color: #ffffff !important;
+        padding: 0.8rem 1.5rem !important;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1rem !important;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        animation: pulse 2s infinite;
+        text-transform: uppercase;
+        letter-spacing: 1px;
         margin-top: 1rem;
         width: auto;
-        display: inline-block;
     }
 
     /* СЕКЦИИ */
@@ -1194,15 +1456,15 @@ body {
     }
 
     .advantage-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 2rem 1rem 2rem 2rem; /* еще меньше справа */
-    background: rgba(37, 99, 235, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(37, 99, 235, 0.2);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 2rem 1rem 2rem 2rem;
+        background: rgba(37, 99, 235, 0.1);
+        border-radius: 15px;
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
     }
 
     .advantage-item:hover {
@@ -1335,6 +1597,258 @@ body {
     .footer-section a {
         font-size: 0.9rem;
     }
+
+    /* СТАТИСТИКА - МОБИЛЬНАЯ АДАПТАЦИЯ */
+    .stats-overlay {
+        position: static !important;
+        transform: none !important;
+        margin: 1.5rem auto 0;
+        max-width: 280px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        background: rgba(13, 20, 33, 0.8);
+        border-radius: 15px;
+        border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    
+    .stat-item {
+        margin-bottom: 0;
+        text-align: center;
+        flex: 1;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 0.2rem;
+    }
+
+    /* ПЛАВАЮЩИЕ ИКОНКИ - АДАПТИВНОСТЬ */
+    .floating-icons {
+        display: none; /* Скрываем на мобильных для производительности */
+    }
+    
+    .decorative-elements {
+        display: none; /* Скрываем декоративные элементы */
+    }
+
+    /* Улучшаем читаемость текста */
+    body {
+        font-size: 16px; /* Предотвращает зум на iOS */
+        -webkit-text-size-adjust: 100%;
+    }
+    
+    /* Улучшаем кликабельность */
+    .contact-btn,
+    .cta-button,
+    .submit-btn,
+    .secondary-btn,
+    .contact-method {
+        min-height: 44px; /* Рекомендация Apple для touch targets */
+        touch-action: manipulation;
+    }
+    
+    /* Убираем выделение при тапе */
+    .contact-btn,
+    .cta-button,
+    .submit-btn,
+    .secondary-btn,
+    .contact-method,
+    .service-card,
+    .nav-link {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Улучшаем скролл */
+    .modal-content {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Фиксируем проблемы с viewport */
+    .hero {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    /* НИЖНИЕ ИКОНКИ СЕРВИСОВ */
+    .service-previews {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(13, 20, 33, 0.95);
+        backdrop-filter: blur(15px);
+        padding: 0.8rem 1rem;
+        border-top: 1px solid rgba(59, 130, 246, 0.3);
+        z-index: 100;
+    }
+
+    .service-preview-grid {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.5rem;
+        max-width: 100%;
+    }
+
+    .service-preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        min-width: 50px;
+        text-decoration: none;
+    }
+
+    .service-preview:hover {
+        background: rgba(59, 130, 246, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .service-preview-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+        color: var(--accent-color, #3b82f6);
+    }
+
+    .service-preview-title {
+        font-size: 0.65rem;
+        color: #ffffff;
+        text-align: center;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+    /* Добавляем отступ снизу для контента, чтобы не перекрывался иконками */
+    .hero {
+        padding-bottom: 5rem !important;
+    }
+}
+
+/* МОБИЛЬНАЯ АДАПТАЦИЯ ДЛЯ СТАТИСТИКИ - ДОПОЛНИТЕЛЬНЫЕ БРЕЙКПОИНТЫ */
+@media (max-width: 1024px) {
+    .stats-overlay {
+        top: 5rem;
+        right: 1rem;
+        padding: 1rem;
+        gap: 1rem;
+        flex-direction: column;
+        min-width: 120px;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+}
+
+/* ДЕСКТОПНЫЕ СТИЛИ ДЛЯ HERO */
+.hero {
+    min-height: 100vh !important;
+    background-image: linear-gradient(135deg, rgba(13, 20, 33, 0.8) 0%, rgba(26, 54, 93, 0.8) 50%, rgba(37, 99, 235, 0.6) 100%), url('img/chisto-sofa-bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 1rem !important;
+}
+
+.hero-content {
+    max-width: 900px !important;
+    padding: 3rem 2rem !important;
+    position: relative;
+    z-index: 3;
+    background: rgba(13, 20, 33, 0.85) !important;
+    backdrop-filter: blur(15px) !important;
+    border-radius: 25px !important;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.6);
+    animation: slideInUp 1s ease-out;
+}
+
+/* РАЗМЕРЫ ТЕКСТА ДЛЯ ДЕСКТОПА */
+.hero h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5rem !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.hero p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 2.5rem !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.cta-button {
+    display: inline-block !important;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24) !important;
+    color: #ffffff !important;
+    padding: 1.2rem 3rem !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+    animation: pulse 2s infinite;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* АДАПТАЦИЯ ДЛЯ HERO CONTENT - УЛУЧШЕННАЯ ВЕРСИЯ */
+@media (max-width: 1200px) {
+    .hero-content {
+        max-width: 85% !important;
+        padding: 2.5rem 2rem !important;
+    }
+    
+    .hero h1 {
+        font-size: 3rem !important;
+    }
+    
+    .hero p {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        max-width: 90% !important;
+        padding: 2.2rem 1.8rem !important;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero p {
+        font-size: 1.2rem !important;
+    }
 }
 
 /* ДОПОЛНИТЕЛЬНАЯ АДАПТАЦИЯ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
@@ -1347,6 +1861,19 @@ body {
     .hero p {
         font-size: 0.9rem !important;
         padding: 0;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-content {
+        max-width: 98% !important;
+        padding: 1.5rem 1.2rem !important;
+        margin: 0 0.5rem;
+        border-radius: 15px !important;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.9rem !important;
     }
 
     .nav-container {
@@ -1388,6 +1915,21 @@ body {
     .modal-service-card {
         padding: 1.2rem;
     }
+
+    /* СТАТИСТИКА */
+    .stats-overlay {
+        max-width: 280px;
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
 }
 
 /* АДАПТАЦИЯ ДЛЯ IPHONE SE И ПОДОБНЫХ */
@@ -1399,17 +1941,22 @@ body {
     .hero h1 {
         font-size: 1.4rem !important;
         line-height: 1.1 !important;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.7rem;
     }
 
     .hero p {
         font-size: 0.85rem !important;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content {
+        padding: 1.2rem 1rem !important;
+        margin: 0 0.3rem;
     }
 
     .cta-button {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.9rem;
+        padding: 0.7rem 1.3rem !important;
+        font-size: 0.85rem !important;
     }
 
     .nav-container {
@@ -1486,6 +2033,20 @@ body {
         top: 8px;
         right: 12px;
     }
+
+    /* СТАТИСТИКА */
+    .stats-overlay {
+        max-width: 260px;
+        padding: 0.8rem;
+    }
+    
+    .stat-number {
+        font-size: 1.2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.65rem;
+    }
 }
 
 /* ФИКСЫ ДЛЯ SAFARI НА iOS */
@@ -1493,6 +2054,25 @@ body {
     .hero {
         min-height: 100vh;
         min-height: -webkit-fill-available;
+    }
+    
+    @media (max-width: 768px) {
+        .hero {
+            min-height: 100vh;
+            min-height: calc(100vh - env(safe-area-inset-top));
+            padding-top: calc(6rem + env(safe-area-inset-top));
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    }
+    
+    /* Учитываем safe-area для iPhone X и новее */
+    .hero-content {
+        margin-left: env(safe-area-inset-left);
+        margin-right: env(safe-area-inset-right);
+    }
+    
+    .service-previews {
+        padding-bottom: env(safe-area-inset-bottom);
     }
     
     .form-group input,
@@ -1512,50 +2092,94 @@ body {
 }
 
 /* ДОПОЛНИТЕЛЬНЫЕ УЛУЧШЕНИЯ ДЛЯ МОБИЛЬНЫХ */
-@media (max-width: 768px) {
-    /* Улучшаем читаемость текста */
-    body {
-        font-size: 16px; /* Предотвращает зум на iOS */
-        -webkit-text-size-adjust: 100%;
-    }
-    
-    /* Улучшаем кликабельность */
-    .contact-btn,
+@media screen and (max-width: 768px) {
+    /* Убираем выделение при тапе на Android */
     .cta-button,
-    .submit-btn,
-    .secondary-btn,
-    .contact-method {
-        min-height: 44px; /* Рекомендация Apple для touch targets */
-        touch-action: manipulation;
-    }
-    
-    /* Убираем выделение при тапе */
     .contact-btn,
-    .cta-button,
-    .submit-btn,
-    .secondary-btn,
-    .contact-method,
     .service-card,
-    .nav-link {
+    .nav-link,
+    .service-preview {
         -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
     
-    /* Улучшаем скролл */
+    /* Улучшаем прокрутку на Android */
     .modal-content {
         -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+}
+
+/* СПЕЦИАЛЬНЫЕ СТИЛИ ДЛЯ КОНКРЕТНЫХ УСТРОЙСТВ */
+
+/* iPhone 5/SE */
+@media only screen 
+  and (device-width: 320px) 
+  and (device-height: 568px) 
+  and (-webkit-device-pixel-ratio: 2) {
+    .hero h1 {
+        font-size: 1.3rem !important;
     }
     
-    /* Фиксируем проблемы с viewport */
+    .hero p {
+        font-size: 0.8rem !important;
+    }
+    
+    .stats-overlay {
+        max-width: 240px;
+        padding: 0.7rem;
+    }
+}
+
+/* iPhone X, XS, 11 Pro и аналогичные */
+@media only screen 
+  and (device-width: 375px) 
+  and (device-height: 812px) 
+  and (-webkit-device-pixel-ratio: 3) {
     .hero {
-        width: 100%;
-        overflow-x: hidden;
+        padding-top: calc(6rem + 44px); /* учитываем notch */
+    }
+}
+
+/* Samsung Galaxy S8/S9 и аналогичные */
+@media only screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (-webkit-device-pixel-ratio: 4) {
+    .hero-content {
+        padding: 1.3rem 1.1rem !important;
+    }
+}
+
+/* АЛЬТЕРНАТИВНЫЕ СТИЛИ ДЛЯ ПЛАВАЮЩИХ ИКОНОК (если нужны на мобильных) */
+@media (max-width: 768px) {
+    .floating-icon {
+        font-size: 1.8rem;
+        opacity: 0.2;
     }
     
-    /* Улучшаем производительность анимаций */
-    .contact-btn,
-    .cta-button,
-    .service-card {
-        will-change: transform;
+    .decorative-circle {
+        opacity: 0.1;
+    }
+    
+    .circle-1 {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .circle-2 {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .circle-3 {
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -1600,15 +2224,57 @@ body {
   </div>
 </header>
 
-    <!-- Главная секция -->
-      <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 data-translate="hero-title">Chisto Sofa пропонує повний спектр професійних клінінгових послуг</h1>
-            <p data-translate="hero-description">Ми перетворюємо ваш дім та офіс в ідеально чистий простір з використанням сучасних технологій та екологічних засобів. Професійне миття терас, фасадів та повний спектр клінінгових послуг у Дніпрі!</p>
-            <a href="#contact" class="cta-button" data-translate="hero-cta">Замовити прибирання</a>
-        </div>
-    </section>
+   <!-- Главная секция -->
+<section id="home" class="hero">
+    <!-- Плавающие иконки -->
+    <div class="floating-icons">
+        <div class="floating-icon">🏠</div>
+        <div class="floating-icon">🛋️</div>
+        <div class="floating-icon">✨</div>
+        <div class="floating-icon">🪟</div>
+        <div class="floating-icon">🏢</div>
+        <div class="floating-icon">🧽</div>
+    </div>
 
+    <!-- Декоративные элементы -->
+    <div class="decorative-elements">
+        <div class="decorative-circle circle-1"></div>
+        <div class="decorative-circle circle-2"></div>
+        <div class="decorative-circle circle-3"></div>
+    </div>
+
+    <!-- Статистика -->
+    <div class="stats-overlay">
+        <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Задоволених клієнтів</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Роки досвіду</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Підтримка</span>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="hero-content">
+        <h1 data-translate="hero-title">Chisto Sofa пропонує повний спектр професійних клінінгових послуг</h1>
+        <p data-translate="hero-description">Ми перетворюємо ваш дім та офіс в ідеально чистий простір з використанням сучасних технологій та екологічних засобів. Професійне миття терас, фасадів та повний спектр клінінгових послуг у Дніпрі!</p>
+        <a href="#contact" class="cta-button" data-translate="hero-cta">Замовити прибирання</a>
+    </div>
+
+    <!-- Превью услуг -->
+    <div class="service-previews">
+        <div class="service-preview" title="Генеральне прибирання">🏠</div>
+        <div class="service-preview" title="Хімчистка меблів">🛋️</div>
+        <div class="service-preview" title="Миття вікон">🪟</div>
+        <div class="service-preview" title="Прибирання офісів">🏢</div>
+        <div class="service-preview" title="Після ремонту">🏗️</div>
+    </div>
+</section>
    
 <!-- Услуги -->
 <section id="services" class="services">
