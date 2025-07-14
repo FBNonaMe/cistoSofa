@@ -46,7 +46,7 @@ function switchLanguage(lang) {
     return;
   }
   if (lang === 'ua') {
-    window.location.href = 'index (3) (1).html';
+    window.location.href = 'index.html';
     return;
   }
   translatePage(lang);
