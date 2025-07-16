@@ -2928,6 +2928,122 @@ body {
                 font-size: 0.8rem;
             }
         }
+
+     .advantages {
+        background-color: #0D1421;
+        padding: 4rem 0;
+        color: #ffffff;
+    }
+
+    .advantages .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .advantage-diamond {
+        color: #3B82F6;
+    }
+
+    .advantages-intro {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .advantage-item {
+        background: rgba(13, 20, 33, 0.7);
+        border-radius: 15px;
+        padding: 2rem;
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        backdrop-filter: blur(10px);
+    }
+
+    .advantage-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .advantage-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .advantage-check {
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .advantage-content h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 0;
+        color: #3B82F6;
+    }
+
+    .advantage-content p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
+    }
+
+    .advantages-outro {
+        text-align: center;
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        padding: 2rem;
+        background: rgba(13, 20, 33, 0.7);
+        border-radius: 15px;
+        margin-top: 2rem;
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+        .advantages {
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            padding: 0 1rem;
+        }
+
+        .advantages-grid {
+            grid-template-columns: 1fr;
+            padding: 0 1rem;
+        }
+
+        .advantage-item {
+            padding: 1.5rem;
+        }
+    }    
         </style>
     </div>
 
@@ -3560,22 +3676,87 @@ body {
         </div>
     </div>
 </div>
-    <!-- Секция преимуществ -->
+        <!-- Секция преимуществ -->
 <section id="advantages" class="advantages">
     <div class="container">
-        <h2 class="section-title animate-on-scroll" data-translate="advantages-title">Почему выбирают нас</h2>
+        <h2 class="section-title animate-on-scroll">
+            <span class="advantage-diamond">🔹</span>
+            Почему выбирают именно нас?
+            <span class="advantage-diamond">🔹</span>
+        </h2>
+
+        <div class="advantages-intro">
+            <p>В условиях высокой конкуренции мы остаёмся выбором №1 у сотен довольных клиентов. Почему?</p>
+        </div>
+
         <div class="advantages-grid">
             <div class="advantage-item animate-on-scroll">
-                <div class="advantage-number">1</div>
                 <div class="advantage-content">
-                    <h3 data-translate="advantage-1-title">Гарантия качества</h3>
-                    <p data-translate="advantage-1-desc">Гарантируем высокое качество наших услуг и готовы переделать при необходимости</p>
+                    <div class="advantage-header">
+                        <span class="advantage-check">✅</span>
+                        <h3>Профессионализм</h3>
+                    </div>
+                    <p>У нас команда обученных специалистов с опытом более 3 лет. Мы знаем, как справиться даже с самой сложной задачей.</p>
                 </div>
             </div>
-            
+
+            <div class="advantage-item animate-on-scroll">
+                <div class="advantage-content">
+                    <div class="advantage-header">
+                        <span class="advantage-check">✅</span>
+                        <h3>Современное оборудование и химия</h3>
+                    </div>
+                    <p>Используем только сертифицированные безопасные средства и технику, которая действительно очищает, а не «создаёт видимость чистоты».</p>
+                </div>
+            </div>
+
+            <div class="advantage-item animate-on-scroll">
+                <div class="advantage-content">
+                    <div class="advantage-header">
+                        <span class="advantage-check">✅</span>
+                        <h3>Ответственность за результат</h3>
+                    </div>
+                    <p>Мы не уходим с объекта, пока клиент не скажет: «Да, теперь идеально».</p>
+                </div>
+            </div>
+
+            <div class="advantage-item animate-on-scroll">
+                <div class="advantage-content">
+                    <div class="advantage-header">
+                        <span class="advantage-check">✅</span>
+                        <h3>Честный расчёт и прозрачная цена</h3>
+                    </div>
+                    <p>Без скрытых доплат, чёткое понимание, за что вы платите.</p>
+                </div>
+            </div>
+
+            <div class="advantage-item animate-on-scroll">
+                <div class="advantage-content">
+                    <div class="advantage-header">
+                        <span class="advantage-check">✅</span>
+                        <h3>Пунктуальность и скорость</h3>
+                    </div>
+                    <p>Соблюдаем сроки, приезжаем вовремя, не затягиваем процесс.</p>
+                </div>
+            </div>
+
+            <div class="advantage-item animate-on-scroll">
+                <div class="advantage-content">
+                    <div class="advantage-header">
+                        <span class="advantage-check">✅</span>
+                        <h3>Гарантия качества</h3>
+                    </div>
+                    <p>Если что-то вдруг не так — мы вернёмся и устраним это бесплатно. Репутация для нас — не просто слова.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="advantages-outro">
+            <p>Мы не просто убираем — мы наводим порядок так, как это сделали бы для себя.</p>
         </div>
     </div>
 </section>
+
 
 
    
