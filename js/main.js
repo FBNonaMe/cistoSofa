@@ -215,153 +215,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
             }
         }
 
-        // Обработка формы
-        // Обработка формы с отправкой в Telegram
-document.getElementById('cleaningForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    const data = {};
-    formData.forEach((value, key) => {
-        data[key] = value;
-    });
-    
-    sendToTelegram(data);
-});
-
-// Функция отправки в Telegram
-async function sendToTelegram(formData) {
-    // ЗАМЕНИТЕ НА ВАШИ ДАННЫЕ:
-    const BOT_TOKEN = '7194194086:AAGrFIAPKYi9hn_O2a9Mv5aPHYKhBfcEyuY'; // Ваш токен бота
-    const CHAT_ID = '-1002876520194';     // Ваш chat ID
-    
-    // Формируем красивое сообщение
-    let message = `🧹 <b>НОВА ЗАЯВКА НА ПРИБИРАННЯ</b>\n\n`;
-    
-    if (formData.name) message += `👤 <b>Ім'я:</b> ${formData.name}\n`;
-    if (formData.phone) message += `📞 <b>Телефон:</b> ${formData.phone}\n`;
-    if (formData.service) message += `🛠 <b>Послуга:</b> ${formData.service}\n`;
-    if (formData.address) message += `📍 <b>Адреса:</b> ${formData.address}\n`;
-    if (formData.area) message += `📏 <b>Площа:</b> ${formData.area} м²\n`;
-    if (formData.date) message += `📅 <b>Дата:</b> ${formData.date}\n`;
-    if (formData.time) message += `🕐 <b>Час:</b> ${formData.time}\n`;
-    if (formData.comments) message += `💬 <b>Коментарі:</b> ${formData.comments}\n`;
-    
-    message += `\n⏰ <b>Час подачі заявки:</b> ${new Date().toLocaleString('uk-UA')}`;
-    
-    try {
-        // Показываем процесс отправки
-        const submitBtn = document.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Відправляємо...';
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = '0.7';
-        
-        // Отправляем через Telegram Bot API
-        const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chat_id: CHAT_ID,
-                text: message,
-                parse_mode: 'HTML'
-            })
-        });
-        
-        const result = await response.json();
-        
-        if (response.ok && result.ok) {
-            // Успешно отправлено
-            showSuccessMessage();
-            document.getElementById('cleaningForm').reset();
-        } else {
-            throw new Error(result.description || 'Помилка відправки');
-        }
-        
-    } catch (error) {
-        console.error('Ошибка отправки:', error);
-        showErrorMessage();
-    } finally {
-        // Восстанавливаем кнопку
-        const submitBtn = document.querySelector('.submit-btn');
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = '1';
-    }
-}
-
-// Функция показа успешного сообщения
-function showSuccessMessage() {
-    // Создаем красивое уведомление
-    const notification = document.createElement('div');
-    notification.innerHTML = `
-        <div style="
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(45deg, #4CAF50, #45a049);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
-            z-index: 10000;
-            font-weight: bold;
-            animation: slideIn 0.5s ease-out;
-        ">
-            ✅ Дякуємо за заявку!<br>
-            <small>Ми зв'яжемося з вами найближчим часом</small>
-        </div>
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Добавляем анимацию
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    // Убираем уведомление через 4 секунды
-    setTimeout(() => {
-        notification.remove();
-    }, 4000);
-}
-
-// Функция показа ошибки
-function showErrorMessage() {
-    const notification = document.createElement('div');
-    notification.innerHTML = `
-        <div style="
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(45deg, #f44336, #d32f2f);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(244, 67, 54, 0.3);
-            z-index: 10000;
-            font-weight: bold;
-            animation: slideIn 0.5s ease-out;
-        ">
-            ❌ Помилка відправки<br>
-            <small>Спробуйте ще раз або зателефонуйте нам</small>
-        </div>
-    `;
-    
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.remove();
-    }, 4000);
-}
-
 
 // ===== МОДАЛЬНОЕ ОКНО "ПРО КОМПАНІЮ" =====
 
@@ -678,39 +531,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-        // Функция для заказа через WhatsApp
-        function contactWhatsApp() {
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            const address = document.getElementById('address').value;
-            const area = document.getElementById('area').value;
-            const date = document.getElementById('date').value;
-            const time = document.getElementById('time').value;
-            const comments = document.getElementById('comments').value;
-            
-            let message = `Привіт! Хочу замовити прибирання:\n\n`;
-            if (name) message += `Ім'я: ${name}\n`;
-            if (phone) message += `Телефон: ${phone}\n`;
-            if (service) message += `Послуга: ${service}\n`;
-            if (address) message += `Адреса: ${address}\n`;
-            if (area) message += `Площа: ${area} м²\n`;
-            if (date) message += `Дата: ${date}\n`;
-            if (time) message += `Час: ${time}\n`;
-            if (comments) message += `Коментарі: ${comments}\n`;
-            
-            const whatsappUrl = `https://wa.me/+380937983888?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        }
+        
 
         // Инициализация
         document.addEventListener('DOMContentLoaded', function() {
             animateOnScroll();
             smoothScroll();
             
-            // Установка минимальной даты на сегодня
-            const today = new Date().toISOString().split('T')[0];
-            document.getElementById('date').setAttribute('min', today);
+            
         });
 
         // Эффект для навигации при скролле
