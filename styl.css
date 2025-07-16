@@ -538,6 +538,7 @@
     animation: slideInUp 0.4s ease;
 }
 
+
 @keyframes slideInUp {
     from {
         opacity: 0;
