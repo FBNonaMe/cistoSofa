@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chisto Sofa - Професійні клінінгові послуги у Дніпрі</title>
+    <title>Chisto Sofa - Профессиональные клининговые услуги в Днепре</title>
   <link rel="stylesheet" href="styl.css">
+  <link rel="stylesheet" href="test.css">
     <style>
         
    /* Основные CSS переменные для темно-синей темы */
@@ -198,7 +199,7 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding: 2rem 1rem !important;
+    padding: 6rem 1rem 8rem !important;
 }
 
 /* Анимированный фон с частицами */
@@ -244,96 +245,23 @@ body {
 .floating-icon:nth-child(6) { top: 35%; left: 5%; animation-delay: 5s; }
 
 /* Основной контент */
-
 .hero-content {
-    width: 100%;
-    max-width: 420px !important;
-    min-width: 180px;
-    padding: 1rem 0.6rem !important;
-    margin: 0 auto;
-    .hero-content {
-        max-width: 95vw !important;
-        min-width: 120px;
-        padding: 0.8rem 0.4rem !important;
-        font-size: 1rem !important;
-        margin: 0 auto !important;
-        box-sizing: border-box;
-    }
-    .hero h1 {
-        font-size: 1.3rem !important;
-    }
-    .hero p {
-        font-size: 0.9rem !important;
-    }
-    .hero-content {
-        max-width: 99vw !important;
-        min-width: 80px;
-        padding: 0.5rem 0.2rem !important;
-        font-size: 0.9rem !important;
-        margin: 0 auto !important;
-        box-sizing: border-box;
-    }
-    .hero h1 {
-        font-size: 1.1rem !important;
-    }
-    .hero p {
-        font-size: 0.8rem !important;
-    }
-    .hero-content {
-        max-width: 700px !important;
-        padding: 1.5rem 1.2rem !important;
-    }
-    .hero-content {
-        max-width: 600px !important;
-        padding: 1.2rem 1rem !important;
-    }
-    .hero-content {
-        max-width: 98vw !important;
-        min-width: 180px;
-        padding: 1rem 0.5rem !important;
-        margin: 0 auto !important;
-        font-size: 1.05rem !important;
-        box-sizing: border-box;
-    }
-    .hero h1 {
-        font-size: 2rem !important;
-    }
-    .hero p {
-        font-size: 1rem !important;
-    }
-    .hero-content {
-        max-width: 99vw !important;
-        min-width: 120px;
-        padding: 0.5rem 0.2rem !important;
-        margin: 0 auto !important;
-        font-size: 0.95rem !important;
-        box-sizing: border-box;
-    }
-    .hero h1 {
-        font-size: 1.3rem !important;
-    }
-    .hero p {
-        font-size: 0.9rem !important;
-    }
-    .hero-content {
-        max-width: 100vw !important;
-        min-width: 80px;
-        padding: 0.3rem 0.1rem !important;
-        font-size: 0.8rem !important;
-    }
+    max-width: 550px !important;
+    padding: 1.5rem 1rem !important;
     position: relative;
     z-index: 3;
     background: rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(15px) !important;
-    border-radius: 25px !important;
+    border-radius: 20px !important;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
     animation: slideInUp 1s ease-out;
+    margin: 2rem auto !important;
 }
 
 .hero h1 {
-    font-size: 3.5rem !important;
-    margin-bottom: 1.5rem !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 1rem !important;
     color: #ffffff !important;
     font-weight: 700;
     line-height: 1.2;
@@ -342,16 +270,21 @@ body {
 }
 
 .hero p {
-    font-size: 1.4rem !important;
-    margin-bottom: 2.5rem !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 1.5rem !important;
     color: rgba(255, 255, 255, 0.95) !important;
-    line-height: 1.6;
+    line-height: 1.5;
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     animation: fadeInUp 1s ease 0.3s both;
 }
 
+/* .cta-button { {
+    padding: 0.9rem 2.2rem !important;
+    font-size: 1rem !important;
+}
+
 /* Кнопка с эффектами */
-.cta-button {
+/* .cta-button {
     display: inline-block !important;
     background: linear-gradient(45deg, #ff6b6b, #ee5a24) !important;
     color: #ffffff !important;
@@ -367,7 +300,7 @@ body {
     animation: pulse 2s infinite;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
+} */
 
 /* Декоративные элементы */
 .decorative-elements {
@@ -544,6 +477,425 @@ body {
     to { opacity: 1; transform: scale(1); }
 }
 
+
+
+ /* === АДАПТИВНОСТЬ ДЛЯ МАЛЕНЬКИХ НОУТБУКОВ И ПК === */
+
+/* Разрешение 1366x768 и около того */
+/* Разрешение 1366x768 и около того */
+@media (max-width: 1366px) and (max-height: 768px) {
+    .hero-content {
+        max-width: 800px !important;
+        padding: 2.5rem 2rem !important;
+        font-size: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero p {
+        font-size: 1.2rem !important;
+    }
+    
+    .stats-overlay {
+        top: 3rem !important;
+        right: 1rem !important;
+        padding: 1rem !important;
+        gap: 1rem !important;
+        min-width: 140px !important;
+        max-width: 200px !important;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem !important;
+    }
+}
+
+/* Разрешение 1280x800 */
+@media (max-width: 1280px) and (max-height: 800px) {
+    .hero-content {
+        max-width: 750px !important;
+        padding: 2.2rem 1.8rem !important;
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1.2rem !important;
+    }
+    
+    .hero p {
+        font-size: 1.1rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+  /*  .cta-button {
+        padding: 1rem 2.5rem !important;
+        font-size: 1.1rem !important;
+    }*/
+    
+    .stats-overlay {
+        top: 2.5rem !important;
+        right: 1rem !important;
+        padding: 0.8rem !important;
+        gap: 0.8rem !important;
+        min-width: 120px !important;
+        max-width: 180px !important;
+    }
+    
+    .stat-number {
+        font-size: 1.3rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* Разрешение 1024x768 */
+@media (max-width: 1024px) and (max-height: 768px) {
+    .hero-content {
+        max-width: 500px !important;
+        padding: 1.5rem 1.2rem !important;
+        font-size: 0.9rem;
+    }
+   
+    .hero h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.1 !important;
+        margin-bottom: 1rem !important;
+    }
+   
+    .hero p {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+   
+   /*  .cta-button {
+        padding: 0.8rem 1.8rem !important;
+        font-size: 0.9rem !important;
+    }*/
+   
+    .stats-overlay {
+        top: 1.5rem !important;
+        right: 0.5rem !important;
+        padding: 0.6rem !important;
+        gap: 0.6rem !important;
+        min-width: 90px !important;
+        max-width: 140px !important;
+    }
+   
+    .stat-number {
+        font-size: 1.1rem !important;
+    }
+   
+    .stat-label {
+        font-size: 0.6rem !important;
+    }
+}
+
+
+
+/* Разрешение 800x600 (старые мониторы) */
+@media (max-width: 800px) and (max-height: 600px) {
+    .hero-content {
+        max-width: 500px !important;
+        padding: 1.2rem 1rem !important;
+        font-size: 0.85rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    .hero p {
+        font-size: 0.85rem !important;
+    }
+    
+    .stats-overlay {
+        top: 1rem !important;
+        right: 0.3rem !important;
+        padding: 0.5rem !important;
+        gap: 0.5rem !important;
+        min-width: 70px !important;
+        max-width: 120px !important;
+    }
+    
+    .stat-number {
+        font-size: 1rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.55rem !important;
+    }
+}
+
+/* Для очень маленьких экранов ноутбуков */
+@media (max-width: 1024px) and (max-height: 576px) {
+    .hero-content {
+        max-width: 550px !important;
+        padding: 1rem 0.8rem !important;
+        font-size: 0.85rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.1 !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .hero p {
+        font-size: 0.8rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    
+   /*  .cta-button {
+        padding: 0.7rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }*/
+    
+    .stats-overlay {
+        top: 0.8rem !important;
+        right: 0.3rem !important;
+        padding: 0.4rem !important;
+        gap: 0.4rem !important;
+        min-width: 60px !important;
+        max-width: 100px !important;
+    }
+    
+    .stat-number {
+        font-size: 0.9rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.5rem !important;
+    }
+}
+
+/* Дополнительные стили для очень широких, но низких экранов */
+@media (min-width: 1200px) and (max-height: 700px) {
+    .hero-content {
+        max-width: 900px !important;
+        padding: 2rem 2.5rem !important;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem !important;
+    }
+    
+    .hero p {
+        font-size: 1.2rem !important;
+    }
+    
+    .stats-overlay {
+        top: 2rem !important;
+        right: 2rem !important;
+        padding: 1.2rem !important;
+        gap: 1.2rem !important;
+        min-width: 160px !important;
+        max-width: 220px !important;
+    }
+    
+    .stat-number {
+        font-size: 1.6rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Для планшетов в ландшафтном режиме */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero-content {
+        max-width: 700px !important;
+        padding: 1.8rem 1.5rem !important;
+    }
+    
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero p {
+        font-size: 1rem !important;
+    }
+    
+    .stats-overlay {
+        position: static !important;
+        transform: none !important;
+        margin: 1.5rem auto 0;
+        max-width: 350px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Исправления для Safari и WebKit */
+@supports (-webkit-appearance: none) {
+    @media (max-width: 1024px) and (max-height: 600px) {
+        .hero {
+            min-height: -webkit-fill-available;
+        }
+        
+        .hero-content {
+            margin-top: env(safe-area-inset-top);
+            margin-bottom: env(safe-area-inset-bottom);
+        }
+    }
+}
+
+/* Дополнительные стили для улучшения читаемости на маленьких экранах */
+@media (max-width: 1024px) and (max-height: 768px) {
+    .hero-content {
+        background: rgba(13, 20, 33, 0.92) !important;
+        backdrop-filter: blur(20px) !important;
+        border: 2px solid rgba(59, 130, 246, 0.4);
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.7);
+    }
+    
+    .stats-overlay {
+        background: rgba(13, 20, 33, 0.85) !important;
+        backdrop-filter: blur(15px) !important;
+        border: 1px solid rgba(59, 130, 246, 0.4);
+    }
+}
+
+/* Оптимизация для производительности на слабых устройствах */
+@media (max-width: 1024px) and (max-height: 768px) {
+    .floating-icons {
+        display: none; /* Отключаем анимации для экономии ресурсов */
+    }
+    
+    .decorative-elements {
+        display: none;
+    }
+    
+    /* Упрощаем анимации */
+    .hero-content {
+        animation: none;
+    }
+    
+    .stats-overlay {
+        animation: none;
+    }
+}
+
+/* Дополнительные медиа-запросы для конкретных разрешений */
+
+/* MacBook Air 11" */
+@media (max-width: 1366px) and (max-height: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .hero-content {
+        max-width: 750px !important;
+        padding: 2rem 1.8rem !important;
+    }
+    
+    .stats-overlay {
+        top: 2.5rem !important;
+        right: 1.5rem !important;
+    }
+}
+
+/* Surface Pro в ландшафтном режиме */
+@media (max-width: 1368px) and (max-height: 912px) {
+    .hero-content {
+        max-width: 800px !important;
+        padding: 2.2rem 2rem !important;
+    }
+    
+    .stats-overlay {
+        top: 3rem !important;
+        right: 2rem !important;
+    }
+}
+
+/* Chromebook стандартные разрешения */
+@media (max-width: 1366px) and (max-height: 768px) {
+    .hero-content {
+        max-width: 780px !important;
+        padding: 2rem 1.8rem !important;
+    }
+}
+
+/* Для экранов с высоким DPI */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px) and (max-height: 768px) {
+    .hero h1 {
+        font-size: 2.2rem !important;
+        text-rendering: optimizeLegibility;
+    }
+    
+    .hero p {
+        font-size: 1rem !important;
+        text-rendering: optimizeLegibility;
+    }
+}
+
+/* Исправления для Firefox */
+@-moz-document url-prefix() {
+    @media (max-width: 1024px) and (max-height: 600px) {
+        .stats-overlay {
+            -moz-backdrop-filter: blur(15px);
+        }
+        
+        .hero-content {
+            -moz-backdrop-filter: blur(15px);
+        }
+    }
+}
+
+/* Дополнительные стили для улучшения UX на маленьких экранах */
+@media (max-width: 1024px) and (max-height: 768px) {
+    /* Увеличиваем размер кликабельных элементов */
+    /*.cta-button {
+        min-height: 48px;
+        touch-action: manipulation;
+    }
+    
+    /* Улучшаем контрастность */
+    .hero h1 {
+        text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+    
+    .hero p {
+        text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+    
+    /* Оптимизируем расстояния */
+    .stats-overlay .stat-item {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Финальные исправления для экстремально маленьких экранов */
+@media (max-width: 800px) and (max-height: 600px) {
+    .hero {
+        padding: 0.5rem !important;
+    }
+    
+    .hero-content {
+        max-width: 95% !important;
+        padding: 1rem 0.8rem !important;
+        border-radius: 15px !important;
+    }
+    
+    .stats-overlay {
+        position: static !important;
+        transform: none !important;
+        margin: 1rem auto 0;
+        max-width: 280px;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+    
 /* Адаптивность для мобильных */
 @media (max-width: 768px) {
     .stats-overlay {
@@ -563,8 +915,75 @@ body {
         height: 60px;
         font-size: 1.5rem;
     }
+    .hero-content {
+        padding: 1rem 1rem !important;
+        max-width: 95vw !important;
+        font-size: 1.1rem !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+    }
+    .hero h1 {
+        font-size: 2.2rem !important;
+    }
+    .hero p {
+        font-size: 1rem !important;
+    }
+    
+   /*  .cta-button {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+    .stats-overlay {
+        flex-direction: column;
+        gap: 0.7rem;
+        padding: 1rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }*/
 }
 
+/* Адаптация для iPhone и ноутбуков с маленькими экранами */
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 0.7rem 0.5rem !important;
+        max-width: 98vw !important;
+        font-size: 1rem !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+    }
+    .hero h1 {
+        font-size: 1.4rem !important;
+    }
+    .hero p {
+        font-size: 0.9rem !important;
+    }
+    /*
+    .cta-button {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem !important;
+    }*/
+
+    .stats-overlay {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.7rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .service-previews {
+        height: 70px;
+        gap: 0.5rem;
+    }
+    .service-preview {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
 /* Секция услуг */
 .services {
     padding: 5rem 0;
@@ -608,9 +1027,24 @@ body {
 }
 
 .service-icon {
-    font-size: 3rem;
+    width: 100%;
+    height: 200px;
     margin-bottom: 1rem;
-    color: var(--light-blue);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-icon:hover img {
+    transform: scale(1.05);
 }
 
 .service-card h3 {
@@ -637,32 +1071,70 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
     color: var(--white);
-    font-size: 1rem;
+    font-size: 0.9rem;
     border: none;
     cursor: pointer;
+    background: var(--light-blue);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+    margin-top: 1rem;
+    max-width: 200px;
+    width: 100%;
 }
 
 .contact-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
 .viber-btn {
-    background: linear-gradient(45deg, #665CAC, #8B5A96);
+    background: linear-gradient(45deg, #1a365d, #2563eb);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.viber-btn:hover {
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
 }
 
 .whatsapp-btn {
-    background: linear-gradient(45deg, #25D366, #128C7E);
+    background: linear-gradient(45deg, #1e40af, #3b82f6);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(45deg, #3b82f6, #60a5fa);
 }
 
 .instagram-btn {
-    background: linear-gradient(45deg, #E4405F, #833AB4, #C13584);
+    background: linear-gradient(45deg, #1e3a8a, #2563eb);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.instagram-btn:hover {
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+}
+
+.tiktok-btn {
+    background: linear-gradient(45deg, #1a365d, #3b82f6);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.tiktok-btn:hover {
+    background: linear-gradient(45deg, #2563eb, #60a5fa);
+}
+
+.tiktok-btn:hover {
+    background: linear-gradient(45deg, #25F4EE, #000000, #FE2C55);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(37, 244, 238, 0.4);
 }
 
 .more-services-btn {
@@ -794,7 +1266,7 @@ body {
 
 /* === НОВЫЕ ДОПОЛНЕНИЯ === */
 
-/* Стили для кнопки "Детальніше" */
+/* Стили для кнопки "Подробнее" */
 .service-more-btn {
     background: var(--light-blue);
     color: var(--white);
@@ -982,7 +1454,7 @@ body {
     line-height: 1.6;
 }
 
-/* Форма контактов */
+/* Форма контактов - ЗАКОММЕНТИРОВАНО
 .contact-form {
     padding: 5rem 0;
     background: var(--primary-blue);
@@ -1078,33 +1550,8 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
 }
+*/
 
-.emergency-contact {
-    text-align: center;
-    background: rgba(255, 0, 0, 0.1);
-    padding: 1.5rem;
-    border-radius: 15px;
-    border: 2px solid rgba(255, 0, 0, 0.3);
-    margin-top: 1rem;
-}
-
-.emergency-contact h3 {
-    color: #ff6b6b;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.emergency-contact a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.emergency-contact a:hover {
-    color: #ff6b6b;
-}
 
 /* Футер */
 .footer {
@@ -1466,7 +1913,7 @@ body {
         padding: 0;
     }
 
-    .cta-button {
+  /*   .cta-button {
         display: inline-block !important;
         background: linear-gradient(45deg, #ff6b6b, #ee5a24) !important;
         color: #ffffff !important;
@@ -1731,7 +2178,7 @@ body {
     
     /* Убираем выделение при тапе */
     .contact-btn,
-    .cta-button,
+    /* .cta-button,*/
     .submit-btn,
     .secondary-btn,
     .contact-method,
@@ -1809,6 +2256,41 @@ body {
 }
 
 /* МОБИЛЬНАЯ АДАПТАЦИЯ ДЛЯ СТАТИСТИКИ - ДОПОЛНИТЕЛЬНЫЕ БРЕЙКПОИНТЫ */
+@media (max-width: 1280px) and (max-height: 800px) {
+    .stats-overlay {
+        position: absolute !important;
+        top: 15rem !important;
+        right: 1rem !important;
+        padding: 0.8rem !important;
+        gap: 0.8rem !important;
+        flex-direction: column !important;
+        min-width: 100px !important;
+        max-width: 150px !important;
+        background: rgba(13, 20, 33, 0.92) !important;
+        backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(59, 130, 246, 0.3) !important;
+        border-radius: 15px !important;
+        box-shadow: 0 4px 16px rgba(31, 38, 135, 0.3) !important;
+        z-index: 100 !important;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem !important;
+        font-weight: bold !important;
+        color: #ffffff !important;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    .stat-item {
+        text-align: center !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
 @media (max-width: 1024px) {
     .stats-overlay {
         top: 5rem;
@@ -1876,7 +2358,7 @@ body {
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-.cta-button {
+/*.cta-button {
     display: inline-block !important;
     background: linear-gradient(45deg, #ff6b6b, #ee5a24) !important;
     color: #ffffff !important;
@@ -1897,31 +2379,31 @@ body {
 /* АДАПТАЦИЯ ДЛЯ HERO CONTENT - УЛУЧШЕННАЯ ВЕРСИЯ */
 @media (max-width: 1200px) {
     .hero-content {
-        max-width: 85% !important;
-        padding: 2.5rem 2rem !important;
+        max-width: 604px !important;
+        padding: 0.1rem 0.1rem !important;
     }
-    
+   
     .hero h1 {
-        font-size: 3rem !important;
+        font-size: 2.2rem !important;
     }
-    
+   
     .hero p {
-        font-size: 1.3rem !important;
+        font-size: 1.1rem !important;
     }
 }
 
 @media (max-width: 992px) {
     .hero-content {
-        max-width: 90% !important;
-        padding: 2.2rem 1.8rem !important;
+        max-width: 350px !important;
+        padding: 1.5rem 1.2rem !important;
     }
-    
+   
     .hero h1 {
-        font-size: 2.5rem !important;
+        font-size: 2rem !important;
     }
-    
+   
     .hero p {
-        font-size: 1.2rem !important;
+        font-size: 1rem !important;
     }
 }
 
@@ -1945,10 +2427,10 @@ body {
         border-radius: 15px !important;
     }
 
-    .cta-button {
+  /*  .cta-button {
         padding: 0.8rem 1.5rem !important;
         font-size: 0.9rem !important;
-    }
+    }*/
 
     .nav-container {
         padding: 0 0.8rem;
@@ -2257,6 +2739,79 @@ body {
     }
 }
 
+.emergency-contact {
+        text-align: center;
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        padding: 1.5rem;
+        border-radius: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        margin-top: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    }
+
+    .emergency-contact:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+        background: linear-gradient(45deg, #ff5252, #ff3d00);
+    }
+
+    .emergency-contact h3 {
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .emergency-phone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .phone-icon {
+        font-size: 1.5rem;
+        animation: pulse 2s infinite;
+    }
+
+    .emergency-hint {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-top: 0.5rem;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+        .emergency-contact {
+            padding: 1.2rem;
+        }
+        
+        .emergency-contact h3 {
+            font-size: 1.1rem;
+        }
+        
+        .emergency-phone {
+            font-size: 1.3rem;
+        }
+        
+        .phone-icon {
+            font-size: 1.3rem;
+        }
+    }
+
     </style>
 
 </head>
@@ -2282,13 +2837,13 @@ body {
         <li><a href="#about" class="nav-link" data-translate="nav-about">О компании</a></li>
         <li class="language-switcher">
           <button class="language-btn" onclick="toggleLanguageDropdown()">
-            <span id="currentLang">�� RU</span>
+            <span id="currentLang">🇺🇦 UA</span>
           </button>
           <div class="language-dropdown" id="languageDropdown">
-            <div class="language-option" onclick="switchLanguage('ua')">
-              🇺🇦 Украинский
+            <div class="language-option active" onclick="switchLanguage('ua')">
+              �� Русский
             </div>
-            <div class="language-option active" onclick="switchLanguage('ru')">
+            <div class="language-option" onclick="switchLanguage('ru')">
               🇷🇺 Русский
             </div>
           </div>
@@ -2325,7 +2880,7 @@ body {
         </div>
         <div class="stat-item">
             <span class="stat-number">3+</span>
-            <span class="stat-label">Лет опыта</span>
+            <span class="stat-label">Годы опыта</span>
         </div>
         <div class="stat-item">
             <span class="stat-number">24/7</span>
@@ -2379,13 +2934,13 @@ body {
     <!-- Основной контент -->
     <div class="hero-content">
         <h1 data-translate="hero-title">Chisto Sofa предлагает полный спектр профессиональных клининговых услуг</h1>
-        <p data-translate="hero-description">Мы превращаем ваш дом и офис в идеально чистое пространство с использованием современных технологий и экологичных средств. Профессиональная мойка террас, фасадов и полный спектр клининговых услуг в Днепре!</p>
-        <a href="#contact" class="cta-button" data-translate="hero-cta">Заказать уборку</a>
+        <p data-translate="hero-description">Мы превращаем ваш дом и офис в идеально чистое пространство с использованием современных технологий и экологических средств. Профессиональное мытье террас, фасадов и полный спектр клининговых услуг в Днепре!</p>
+    
     </div>
 
     <!-- Превью услуг -->
     <div class="service-previews">
-        <div class="service-preview" title="Генеральная уборка" onclick="openServiceModal('general')">🏠</div>
+        <div class="service-preview" title="Генеральне прибирання" onclick="openServiceModal('general')">🏠</div>
         <div class="service-preview" title="Химчистка мебели" onclick="openServiceModal('furniture')">🛋️</div>
         <div class="service-preview" title="Мойка окон" onclick="openServiceModal('windows')">🪟</div>
         <div class="service-preview" title="Уборка офисов" onclick="openServiceModal('office')">🏢</div>
@@ -2401,47 +2956,59 @@ body {
 
       <!-- 1. Генеральне прибирання -->
       <div class="service-card animate-on-scroll">
-        <div class="service-icon">🏠</div>
-        <h3 data-translate="service-general">Генеральная уборка</h3>
+        <div class="service-icon">
+            <img src="img/генеральна.jpg" alt="Генеральне прибирання" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 data-translate="service-general">Генеральне прибирання</h3>
         <p data-translate="service-general-desc">Полная очистка всех помещений с использованием профессиональных средств и оборудования</p>
         <button class="service-more-btn" onclick="openServiceModal('general')" data-translate="service-more-btn">Подробнее</button>
       </div>
 
-      <!-- 2. Підтримуюче прибирання -->
+      <!-- 2. Поддерживающая уборка -->
       <div class="service-card animate-on-scroll">
-        <div class="service-icon">✨</div>
+        <div class="service-icon">
+             <img src="img/22.jpg" alt="Поддерживающая уборка" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
         <h3 data-translate="service-maintenance">Поддерживающая уборка</h3>
         <p data-translate="service-maintenance-desc">Регулярная уборка для поддержания чистоты и порядка в вашем доме или офисе</p>
         <button class="service-more-btn" onclick="openServiceModal('maintenance')" data-translate="service-more-btn">Подробнее</button>
       </div>
 
-      <!-- 3. Прибирання після ремонту -->
+      <!-- 3. Уборка после ремонта -->
       <div class="service-card animate-on-scroll">
-        <div class="service-icon">🏗️</div>
+        <div class="service-icon">
+            <img src="img/после сторой.jpg" alt="Уборка после ремонта" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
         <h3 data-translate="service-renovation">Уборка после ремонта</h3>
         <p data-translate="service-renovation-desc">Специализированная уборка помещений после строительных и ремонтных работ</p>
         <button class="service-more-btn" onclick="openServiceModal('renovation')" data-translate="service-more-btn">Подробнее</button>
       </div>
 
-      <!-- 4. Миття вікон -->
+      <!-- 4. Мытье окон -->
       <div class="service-card animate-on-scroll">
-        <div class="service-icon">🪟</div>
-        <h3 data-translate="service-windows">Мойка окон, террас и фасадов</h3>
-        <p data-translate="service-windows-desc">Качественная мойка окон на любой высоте и профессиональная очистка террас и фасадов зданий</p>
+        <div class="service-icon">
+            <img src="img/Миття вікон, терас та фасадів.jpg" alt="Мытье окон, террас и фасадов" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 data-translate="service-windows">Мытье окон, террас и фасадов</h3>
+        <p data-translate="service-windows-desc">Качественное мытье окон на любой высоте и профессиональная очистка террас и фасадов зданий</p>
         <button class="service-more-btn" onclick="openServiceModal('windows')" data-translate="service-more-btn">Подробнее</button>
       </div>
 
-      <!-- 5. Хімчистка м'яких меблів -->
+      <!-- 5. Химчистка мягкой мебели -->
       <div class="service-card animate-on-scroll">
-        <div class="service-icon">🛋️</div>
+        <div class="service-icon">
+             <img src="img/химчистка.jpg" alt="Химчистка мягкой мебели" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
         <h3 data-translate="service-furniture">Химчистка мягкой мебели</h3>
         <p data-translate="service-furniture-desc">Глубокая очистка мягкой мебели и ковров с удалением сложных пятен</p>
         <button class="service-more-btn" onclick="openServiceModal('furniture')" data-translate="service-more-btn">Подробнее</button>
       </div>
 
-      <!-- 6. Прибирання офісів -->
+      <!-- 6. Уборка офисов -->
       <div class="service-card animate-on-scroll">
-        <div class="service-icon">🏢</div>
+        <div class="service-icon">
+             <img src="img/Прибирання офісів.jpg" alt="Уборка офисов" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
         <h3 data-translate="service-office">Уборка офисов</h3>
         <p data-translate="service-office-desc">Профессиональная уборка коммерческих помещений с учетом специфики бизнеса</p>
         <button class="service-more-btn" onclick="openServiceModal('office')" data-translate="service-more-btn">Подробнее</button>
@@ -2462,31 +3029,43 @@ body {
                 <a href="https://www.instagram.com/chisto_sofa?igsh=MWE5dnRyejE2NmllaQ==" class="contact-btn instagram-btn" target="_blank">
                     📸 Instagram
                 </a>
+                <a href="https://www.tiktok.com/@chisto.sofa?_t=ZM-8xYbyaFuyWc&_r=1" class="contact-btn tiktok-btn" target="_blank">
+                    🎵 TikTok
+                </a>
                 
                 <button class="contact-btn gallery-btn" onclick="openGalleryModal()" data-translate="gallery-btn">
                     📷 Галерея наших работ
                 </button>
+                <div class="emergency-contact" onclick="window.location.href='tel:+380937983888';" style="cursor: pointer;">
+                    <h3 data-translate="emergency-call">🚨 Срочный звонок</h3>
+                    <a href="tel:+380937983888" class="emergency-phone">
+                        <span class="phone-icon">📞</span>
+                        <span class="phone-number">+38 (093) 798-38-88</span>
+                    </a>
+                    <div class="emergency-hint">Нажмите, чтобы позвонить</div>
+                </div>
             </div>
         </div>
     </section>
 
+    
 
-<!-- Модальне вікно "Про компанію" -->
+<!-- Модальное окно "О компании" -->
 <div id="aboutModal" class="modal">
     <div class="modal-content">
         <button class="close-modal" onclick="closeAboutModal()">&times;</button>
-        <h3 data-translate="about-title">О нас</h3>
+        <h3 data-translate="about-title">Про нас</h3>
         <p data-translate="about-intro">
             Мы — <strong>«Chisto Sofa»</strong>. Мы любим чистоту. И мы умеем её создавать.
         </p>
         <p data-translate="about-experience">
-            Мы работаем не так давно, но у нас больше опыта, чем у многих на рынке. За плечами — реальные 3+ года работы, сотни убранных домов, десятки довольных клиентов, которые советуют нас друзьям и возвращаются снова.
+            Мы работаем не так давно, но опыта у нас больше, чем у многих на рынке. За плечами — реальные 3+ года работы, сотни убранных домов, десятки довольных клиентов, которые рекомендуют нас друзьям и возвращаются снова.
         </p>
         <p data-translate="about-mission">
-            Мы не просто убираем — мы меняем атмосферу в вашем доме. Там, где вчера было грязно, сегодня — свежо, уютно и спокойно. Там, где был хаос после ремонта — появляется пространство для жизни.
+            Мы не просто убираем — мы меняем атмосферу в вашем доме. Там, где еще вчера было грязно, сегодня — свежо, уютно и спокойно. Там, где был хаос после ремонта — появляется пространство для жизни.
         </p>
         <p data-translate="about-team">
-            Мы молодая команда, но у каждого из нас — большое желание делать свою работу качественно. Ведь каждый диван, каждая кухня или гостиная для нас — как своя.
+            Мы молодая команда, но у каждого из нас — большое желание сделать свою работу качественно. Потому что каждый диван, каждая кухня или гостиная для нас — как своя.
         </p>
         <p data-translate="about-values">
             Мы честные, открытые, пунктуальные и внимательные к деталям. Нам важно не просто выполнить работу, а чтобы вы сказали:
@@ -2545,7 +3124,7 @@ body {
                 <div class="gallery-item-media">
                     <img 
                         src="img/2.jpeg" 
-                        alt="Результат хімчистки" 
+                        alt="Результат химчистки" 
                         loading="lazy">
                     
                     <div class="image-fallback" style="display:none;">
@@ -2603,7 +3182,7 @@ body {
                         </div>
                     </div>
                     
-                    <div class="media-overlay video-overlay">🎥 Видео</div>
+                    <div class="media-overlay video-overlay">🎥 Відео</div>
                     <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
                 </div>
             </div>
@@ -2625,11 +3204,11 @@ body {
                     <div class="video-fallback" style="display:none;">
                         <div class="fallback-content">
                             <span class="fallback-icon">🎥</span>
-                            <span class="fallback-text">Мойка фасадов</span>
+                            <span class="fallback-text">Миття фасадів</span>
                         </div>
                     </div>
                     
-                    <div class="media-overlay video-overlay">🎥 Видео</div>
+                    <div class="media-overlay video-overlay">🎥 Відео</div>
                     <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
                 </div>
             </div>
@@ -2708,7 +3287,7 @@ body {
                         </div>
                     </div>
                     
-                    <div class="media-overlay video-overlay">🎥 Відео</div>
+                    <div class="media-overlay video-overlay">🎥 Видео</div>
                     <div class="video-play-btn" onclick="event.stopPropagation(); toggleVideo(this)">▶</div>
                 </div>
             </div>
@@ -2747,19 +3326,20 @@ body {
 <div id="servicesModal" class="modal">
     <div class="modal-content">
         <button class="close-modal" onclick="closeModal()">&times;</button>
-        <h3 data-translate="modal-title">услуги Chisto Sofa</h3>
+        <h3 data-translate="modal-title">Услуги Chisto Sofa</h3>
         <div class="additional-services">
             <div class="modal-service-card">
     <div class="modal-service-icon">🏠</div>
     <div class="modal-service-title" data-translate="modal-general-title">Генеральная уборка от Chisto Sofa</div>
-    <div class="modal-service-desc" data-translate="modal-general-desc">Генеральная уборка — это глубокая очистка вашего пространства с вниманием к каждой детали. Мы работаем с душой, соблюдая высокие стандарты чистоты, чтобы ваш дом сиял свежестью.</div>
-    <div class="modal-service-section">
-        <h4 class="modal-service-subtitle" data-translate="modal-general-what-included">Что входит в услугу генеральной уборки?</h4>
+    <div class="modal-service-desc" data-translate="modal-general-desc">Генеральная уборка — это глубокая очистка вашего пространства с вниманием к каждой детали. Мы работаем с душой, придерживаясь высоких стандартов чистоты, чтобы ваш дом сиял свежестью.</div>
+    
+    <div class="modal-service-section">                        <h4 class="modal-service-subtitle" data-translate="modal-general-what-included">Что входит в услугу генеральной уборки?</h4>
     </div>
+
     <div class="modal-service-section">
         <h5 data-translate="modal-general-rooms">🛋 В комнатах:</h5>
         <ul class="modal-service-list">
-            <li data-translate="modal-general-rooms-1">Удаление пыли со стен и потолка</li>
+            <li data-translate="modal-general-rooms-1">Обеспыливание стен и потолка</li>
             <li data-translate="modal-general-rooms-2">Влажная протирка: карнизов, подоконников, батарей, выключателей, розеток, дверей, мебели и техники</li>
             <li data-translate="modal-general-rooms-3">Отодвигаем легкую мебель — моем за ней</li>
             <li data-translate="modal-general-rooms-4">Полируем зеркала и стеклянные поверхности</li>
@@ -2767,73 +3347,74 @@ body {
             <li data-translate="modal-general-rooms-6">Выносим мусор в место утилизации</li>
         </ul>
     </div>
-    <div class="modal-service-section">
-        <h5 data-translate="modal-general-kitchen">🍳 На кухне:</h5>
-        <ul class="modal-service-list">
-            <li data-translate="modal-general-kitchen-1">Всё из списка выше +</li>
-            <li data-translate="modal-general-kitchen-2">Мойка рабочей зоны: фартук, столешница, плита, раковина</li>
-            <li data-translate="modal-general-kitchen-3">Чистка фасадов кухни сверху донизу</li>
-            <li data-translate="modal-general-kitchen-4">Мойка бытовой техники снаружи</li>
-            <li data-translate="modal-general-kitchen-5">Протираем обеденный стол и стулья</li>
-        </ul>
-    </div>
-    <div class="modal-service-section">
-        <h5 data-translate="modal-general-bathroom">🚿 В санузле:</h5>
-        <ul class="modal-service-list">
-            <li data-translate="modal-general-bathroom-1">Всё из списка комнат +</li>
-            <li data-translate="modal-general-bathroom-2">Мойка плитки</li>
-            <li data-translate="modal-general-bathroom-3">Чистка вентиляционной решётки</li>
-            <li data-translate="modal-general-bathroom-4">Удаление налёта и ржавчины с сантехники</li>
-            <li data-translate="modal-general-bathroom-5">Полировка смесителей, кранов, лейок</li>
-            <li data-translate="modal-general-bathroom-6">Удаление грибка (по возможности)</li>
-        </ul>
-        <h5>🧴 Дополнительные услуги <strong>Chisto Sofa</strong></h5>
-        <ul class="modal-service-list">
-            <li>Мойка холодильника (внутри)</li>
-            <li>Мойка морозильной камеры</li>
-            <li>Мойка духового шкафа (внутри)</li>
-            <li>Мойка микроволновой печи (внутри)</li>
-            <li>Мойка вытяжки/сетки</li>
-            <li>Мойка стиральной машины (внутри)</li>
-            <li>Мойка посудомоечной машины</li>
-            <li>Мойка кухонных шкафов (внутри)</li>
-            <li>Мойка мебели в квартире</li>
-            <li>Мойка сложных люстр</li>
-            <li>Снять/постирать/повесить шторы</li>
-            <li>Мойка жалюзи</li>
-            <li>Мойка посуды</li>
-            <li>Глажка</li>
-            <li>Химчистка мягкой мебели <strong>(-30% при генеральной уборке)</strong></li>
-            <li>Химчистка ковролина</li>
-            <li>Чистка межплиточных швов</li>
-        </ul>
-    </div>
+                    <div class="modal-service-section">
+                        <h5 data-translate="modal-general-kitchen">🍳 На кухне:</h5>
+                        <ul class="modal-service-list">
+                            <li data-translate="modal-general-kitchen-1">Все из списка выше +</li>
+                            <li data-translate="modal-general-kitchen-2">Мытье рабочей зоны: фартук, столешница, плита, раковина</li>
+                            <li data-translate="modal-general-kitchen-3">Чистка фасадов кухни сверху донизу</li>
+                            <li data-translate="modal-general-kitchen-4">Мытье бытовой техники снаружи</li>
+                            <li data-translate="modal-general-kitchen-5">Протираем обеденный стол и стулья</li>
+                        </ul>
+                    </div>
+                    <div class="modal-service-section">
+                        <h5 data-translate="modal-general-bathroom">🚿 В санузле:</h5>
+                        <ul class="modal-service-list">
+                            <li data-translate="modal-general-bathroom-1">Все из списка комнат +</li>
+                            <li data-translate="modal-general-bathroom-2">Мытье плитки</li>
+                            <li data-translate="modal-general-bathroom-3">Чистка вентиляционной решетки</li>
+                            <li data-translate="modal-general-bathroom-4">Удаление налета и ржавчины с сантехники</li>
+                            <li data-translate="modal-general-bathroom-5">Полировка смесителей, кранов, леек</li>
+                            <li data-translate="modal-general-bathroom-6">Удаление грибка (по возможности)</li>
+                        </ul>
+                        
+                        <h5>🧴 Дополнительные услуги <strong>Chisto Sofa</strong></h5>
+    <ul class="modal-service-list">
+        <li>Мытье холодильника (внутри)</li>
+        <li>Мытье морозильной камеры</li>
+        <li>Мытье духового шкафа (внутри)</li>
+        <li>Мытье микроволновой печи (внутри)</li>
+        <li>Мытье вытяжки/сетки</li>
+        <li>Мытье стиральной машины (внутри)</li>
+        <li>Мытье посудомоечной машины</li>
+        <li>Мытье кухонных шкафов (внутри)</li>
+        <li>Мытье мебели в квартире</li>
+        <li>Мытье сложных люстр</li>
+        <li>Снять/постирать/повесить шторы</li>
+        <li>Мытье жалюзи</li>
+        <li>Мытье посуды</li>
+        <li>Глажка</li>
+        <li>Хімчистка м’яких меблів <strong>(-30% при генеральному прибиранні)</strong></li>
+        <li>Химчистка коврового покрытия</li>
+        <li>Чистка межплиточных швов</li>
+    </ul>
+</div>
                     </div>
                 </div>
                 
                 <div class="modal-service-card">
                     <div class="modal-service-icon">🛋️</div>
                     <div class="modal-service-title" data-translate="modal-furniture-title">Химчистка мягкой мебели от Chisto Sofa</div>
-                    <div class="modal-service-desc" data-translate="modal-furniture-desc">Мягкая мебель ежедневно накапливает пыль, пятна, шерсть животных, запахи и бактерии. Обычная уборка не даёт желаемого результата — нужна профессиональная химчистка. Мы вернём свежесть, чистоту и цвет вашему любимому дивану или креслам.</div>
+                    <div class="modal-service-desc" data-translate="modal-furniture-desc">Мягкая мебель ежедневно накапливает пыль, пятна, шерсть животных, запахи и бактерии. Обычная уборка не дает желаемого результата — нужна профессиональная химчистка. Мы вернем свежесть, чистоту и цвет вашему любимому дивану или креслам.</div>
                     <div class="modal-service-section">
                         <h5 data-translate="modal-furniture-what">🧼 Что именно чистим:</h5>
                         <ul class="modal-service-list">
                             <li data-translate="modal-furniture-what-1">Диваны (прямые, угловые, раскладные)</li>
                             <li data-translate="modal-furniture-what-2">Кресла, пуфы, банкетки</li>
-                            <li data-translate="modal-furniture-what-3">Матрасы</li>
+                            <li data-translate="modal-furniture-what-3">Матраци</li>
                             <li data-translate="modal-furniture-what-4">Кровати с мягким изголовьем</li>
                             <li data-translate="modal-furniture-what-5">Стулья с мягкой обивкой</li>
                             <li data-translate="modal-furniture-what-6">Офисные кресла</li>
                         </ul>
                     </div>
                     <div class="modal-service-section">
-                        <h5 data-translate="modal-furniture-how">🔹 Что мы делаем:</h5>
+                        <h5 data-translate="modal-furniture-how">🔹 Що ми робимо:</h5>
                         <ul class="modal-service-list">
                             <li data-translate="modal-furniture-how-1">Пылесосим мебель и швы</li>
                             <li data-translate="modal-furniture-how-2">Удаляем пятна, разводы, запахи</li>
                             <li data-translate="modal-furniture-how-3">Проводим глубокую очистку изнутри и снаружи</li>
                             <li data-translate="modal-furniture-how-4">Дезинфицируем поверхность безопасными средствами</li>
-                            <li data-translate="modal-furniture-how-5">Удаляем шерсть, пылевых клещей и бактерии</li>
+                            <li data-translate="modal-furniture-how-5">Выводим шерсть, пылевых клещей и бактерии</li>
                             <li data-translate="modal-furniture-how-6">Мебель готова к использованию через несколько часов</li>
                         </ul>
                     </div>
@@ -2852,7 +3433,7 @@ body {
                     <div class="modal-service-title" data-translate="modal-renovation-title">Уборка после ремонта от Chisto Sofa</div>
                     <div class="modal-service-desc" data-translate="modal-renovation-desc">После ремонта — пыль, грязь, пятна краски, остатки скотча и штукатурки. Мы знаем, как всё это убрать быстро, профессионально и с заботой о вашем пространстве.</div>
                     <div class="modal-service-section">
-                        <h5 data-translate="modal-renovation-what-included">Что входит в услугу:</h5>
+                        <h5 data-translate="modal-renovation-what-included">Что  входить у послугу:</h5>
                         <h5 data-translate="modal-renovation-rooms">🛏 В комнатах:</h5>
                         <ul class="modal-service-list">
                             <li data-translate="modal-renovation-rooms-1">Удаляем пыль с потолка и стен</li>
@@ -2868,8 +3449,8 @@ body {
                     <div class="modal-service-section">
                         <h5 data-translate="modal-renovation-kitchen">🍽 На кухне:</h5>
                         <ul class="modal-service-list">
-                            <li data-translate="modal-renovation-kitchen-1">(всё из комнат +)</li>
-                            <li data-translate="modal-renovation-kitchen-2">Снимаем защитную плёнку с фасадов (по согласованию с клиентом)</li>
+                            <li data-translate="modal-renovation-kitchen-1">(все из комнат +)</li>
+                            <li data-translate="modal-renovation-kitchen-2">Снимаем защитную пленку с фасадов (с согласия клиента)</li>
                             <li data-translate="modal-renovation-kitchen-3">Протираем шкафы снаружи и внутри</li>
                             <li data-translate="modal-renovation-kitchen-4">Моем плиту, раковину, фартук, столешницу</li>
                             <li data-translate="modal-renovation-kitchen-5">Очищаем технику внутри и снаружи</li>
@@ -2877,14 +3458,14 @@ body {
                         </ul>
                     </div>
                     <div class="modal-service-section">
-                        <h5 data-translate="modal-renovation-bathroom">🚿 В санузлах:</h5>
+                        <h5 data-translate="modal-renovation-bathroom">🚿 У санвузлах:</h5>
                         <ul class="modal-service-list">
-                            <li data-translate="modal-renovation-bathroom-1">(всё из комнат +)</li>
-                            <li data-translate="modal-renovation-bathroom-2">Мойка плитки и швов (удаление эпоксидной смолы — это дополнительная услуга)</li>
-                            <li data-translate="modal-renovation-bathroom-3">Чистка вентиляционной решётки</li>
+                            <li data-translate="modal-renovation-bathroom-1">(все из комнат +)</li>
+                            <li data-translate="modal-renovation-bathroom-2">Мытье плитки и швов (снятие эпоксидной смолы — это дополнительная услуга)</li>
+                            <li data-translate="modal-renovation-bathroom-3">Чистка вентиляционной решетки</li>
                             <li data-translate="modal-renovation-bathroom-4">Полировка стекла в душевой</li>
                             <li data-translate="modal-renovation-bathroom-5">Очистка сантехники: умывальника, ванны, туалета, биде</li>
-                            <li data-translate="modal-renovation-bathroom-6">Полировка смесителей, кранов и лейок</li>
+                            <li data-translate="modal-renovation-bathroom-6">Полировка смесителей, кранов и леек</li>
                         </ul>
                     </div>
                 </div>
@@ -2902,18 +3483,18 @@ body {
                             <li data-translate="modal-office-includes-4">🖲 Протираем двери, выключатели, розетки</li>
                             <li data-translate="modal-office-includes-5">🧴 Дезинфицируем контактные зоны (клавиатуры, мыши, кнопки)</li>
                             <li data-translate="modal-office-includes-6">🚻 Очищаем санузлы (раковина, унитаз, зеркала)</li>
-                            <li data-translate="modal-office-includes-7">☕️ Приводим в порядок кухонную зону: столешница, раковина, микроволновка</li>
+                            <li data-translate="modal-office-includes-7">☕️ Приводим в порядок кухонную зону: столешница, раковина, микроволновая</li>
                         </ul>
                     </div>
                     <div class="modal-service-section">
                         <h5 data-translate="modal-office-offer">Мы предлагаем:</h5>
                         <ul class="modal-service-list">
-                            <li data-translate="modal-office-offer-1">📆 Разовая или регулярная уборка</li>
-                            <li data-translate="modal-office-offer-2">🧴 Безопасная химия — для офисов с персоналом</li>
+                            <li data-translate="modal-office-offer-1">📆 Разовую или регулярную уборку</li>
+                            <li data-translate="modal-office-offer-2">🧴 Безопасную химию — для офисов с персоналом</li>
                             <li data-translate="modal-office-offer-3">🧼 Работу по графику (до или после рабочего дня)</li>
                             <li data-translate="modal-office-offer-4">🔍 Качество контролирует ответственный мастер</li>
                             <li data-translate="modal-office-offer-5">📍 Работаем по всему Днепру и ближайшим районам</li>
-                            <li data-translate="modal-office-offer-6">📲 Оставьте заявку — подберём оптимальный формат именно для вашего офиса</li>
+                            <li data-translate="modal-office-offer-6">📲 Оставьте заявку — подберем оптимальный формат именно для вашего офиса</li>
                         </ul>
                     </div>
                 </div>
@@ -2930,8 +3511,8 @@ body {
                         <ul class="modal-service-list">
                             <li data-translate="modal-maintenance-regular-1">Ежедневная, еженедельная или ежемесячная уборка</li>
                             <li data-translate="modal-maintenance-regular-2">Поддержание чистоты в жилых зонах</li>
-                            <li data-translate="modal-maintenance-regular-3">Удаление пыли с поверхностей</li>
-                            <li data-translate="modal-maintenance-regular-4">Мойка полов во всех помещениях</li>
+                            <li data-translate="modal-maintenance-regular-3">Уборка пыли с поверхностей</li>
+                            <li data-translate="modal-maintenance-regular-4">Мытье полов во всех помещениях</li>
                             <li data-translate="modal-maintenance-regular-5">Очистка сантехники</li>
                             <li data-translate="modal-maintenance-regular-6">Вынос мусора</li>
                         </ul>
@@ -2941,14 +3522,14 @@ body {
                 <!-- 6. Миття вікон, терас та фасадів -->
                 <div class="modal-service-card">
                     <div class="modal-service-icon">🪟</div>
-                    <div class="modal-service-title" data-translate="modal-windows-title">Мойка окон, террас и фасадов от Chisto Sofa</div>
-                    <div class="modal-service-desc" data-translate="modal-windows-desc">Chisto Sofa предлагает полный спектр профессиональных клининговых услуг для вашего комфорта. Chisto Sofa выполняет мойку террас и фасадов! Загрязнения, пыль, мох или пятна на фасаде или террасе? Мы вернём чистоту и свежесть вашему пространству!</div>
+                    <div class="modal-service-title" data-translate="modal-windows-title">Мытье окон, террас и фасадов от Chisto Sofa</div>
+                    <div class="modal-service-desc" data-translate="modal-windows-desc">Chisto Sofa предлагает полный спектр профессиональных клининговых услуг для вашего комфорта. Chisto Sofa предлагает мытье террас и фасадов! Загрязнения, пыль, мох или пятна на фасаде или террасе? Мы вернем чистоту и свежесть вашему пространству!</div>
                     <div class="modal-service-section">
                         <h5 data-translate="modal-windows-advantages">🏆 Наши преимущества:</h5>
                         <ul class="modal-service-list">
                             <li data-translate="modal-windows-advantages-1">Профессиональное оборудование высокого класса</li>
-                            <li data-translate="modal-windows-advantages-2">Безопасные экологичные моющие средства</li>
-                            <li data-translate="modal-windows-advantages-3">Быстро, качественно, надёжно</li>
+                            <li data-translate="modal-windows-advantages-2">Безопасные экологические моющие средства</li>
+                            <li data-translate="modal-windows-advantages-3">Быстро, качественно, надежно</li>
                             <li data-translate="modal-windows-advantages-4">Гарантия на выполненные работы</li>
                         </ul>
                     </div>
@@ -2960,17 +3541,17 @@ body {
                             <li data-translate="modal-windows-ideal-3">Кафе и ресторанов</li>
                             <li data-translate="modal-windows-ideal-4">Торговых центров</li>
                         </ul>
-                        <p data-translate="modal-windows-location">📍 Обслуживаем Днепр и пригороды</p>
+                        <p data-translate="modal-windows-location">📍 Обслуживаем Днепр и пригород</p>
                     </div>
                     <div class="modal-service-section">
                         <h5 data-translate="modal-windows-full-spectrum">📋 Полный спектр наших услуг:</h5>
                         <p data-translate="modal-windows-company-desc">Наша клининговая компания предлагает широкий спектр профессиональных услуг для поддержания чистоты и комфорта в вашем пространстве.</p>
                         <ul class="modal-service-list">
-                            <li data-translate="modal-windows-full-1">Генеральная уборка — полная очистка всех помещений</li>
-                            <li data-translate="modal-windows-full-2">Уборка после ремонта — удаление строительной пыли и грязи</li>
-                            <li data-translate="modal-windows-full-3">Поддерживающая уборка — регулярное обслуживание</li>
-                            <li data-translate="modal-windows-full-4">Химчистка мягкой мебели — профессиональная очистка диванов, кресел</li>
-                            <li data-translate="modal-windows-full-5">Мойка окон, террас и фасадов — внешняя очистка зданий</li>
+                            <li data-translate="modal-windows-full-1">Генеральная уборка - полная очистка всех помещений</li>
+                            <li data-translate="modal-windows-full-2">Уборка после ремонта - удаление строительной пыли и грязи</li>
+                            <li data-translate="modal-windows-full-3">Поддерживающая уборка - регулярное обслуживание</li>
+                            <li data-translate="modal-windows-full-4">Химчистка мягкой мебели - профессиональная очистка диванов, кресел</li>
+                            <li data-translate="modal-windows-full-5">Мытье окон, террас и фасадов - внешняя очистка зданий</li>
                         </ul>
                         <p data-translate="modal-windows-individual">💡 Индивидуальный подход к каждому клиенту и бесплатная консультация!</p>
                     </div>
@@ -2997,98 +3578,7 @@ body {
 </section>
 
 
-   <!-- Форма контактов -->
-<section id="contact" class="contact-form">
-    <div class="container">
-        <h2 class="section-title animate-on-scroll" data-translate="contact-title">Заказать уборку</h2>
-        <div class="form-container animate-on-scroll">
-            <form id="cleaningForm">
-                <div class="form-group">
-                    <label for="name" data-translate="form-name">Имя *</label>
-                    <input type="text" id="name" name="name" required data-translate-placeholder="form-name-placeholder" placeholder="Введите ваше имя">
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone" data-translate="form-phone">Телефон *</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+380 XX XXX XX XX">
-                </div>
-                
-                <div class="form-group">
-                    <label for="service" data-translate="form-service">Тип услуги *</label>
-                    <select id="service" name="service" required>
-                        <option value="" data-translate="form-service-select">Выберите услугу</option>
-                        <option value="general" data-translate="service-general">Генеральная уборка</option>
-                        <option value="maintenance" data-translate="service-maintenance">Поддерживающая уборка</option>
-                        <option value="office" data-translate="service-office">Уборка офисов</option>
-                        <option value="windows" data-translate="service-windows">Мойка окон, террас и фасадов</option>
-                        <option value="furniture" data-translate="service-furniture">Химчистка мягкой мебели</option>
-                        <option value="post-renovation" data-translate="service-renovation">Уборка после ремонта</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="address" data-translate="form-address">Адрес</label>
-                    <input type="text" id="address" name="address" data-translate-placeholder="form-address-placeholder" placeholder="Введите адрес для выполнения работ">
-                </div>
-                
-                <div class="form-group">
-                    <label for="area" data-translate="form-area">Площадь помещения (м²)</label>
-                    <input type="number" id="area" name="area" data-translate-placeholder="form-area-placeholder" placeholder="Введите площадь помещения">
-                </div>
-                
-                <div class="form-group">
-                    <label for="date" data-translate="form-date">Желаемая дата</label>
-                    <input type="date" id="date" name="date">
-                </div>
-                
-                <div class="form-group">
-                    <label for="time" data-translate="form-time">Желаемое время</label>
-                    <input type="time" id="time" name="time">
-                </div>
-                
-                <div class="form-group">
-                    <label for="comments" data-translate="form-comments">Дополнительные пожелания</label>
-                    <textarea id="comments" name="comments" rows="4" data-translate-placeholder="form-comments-placeholder" placeholder="Опишите особенности работы или дополнительные пожелания"></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn" data-translate="form-submit">Отправить заявку</button>
-                <button type="button" class="secondary-btn" onclick="contactWhatsApp()" data-translate="form-whatsapp">Заказать через WhatsApp</button>
-                
-                <!-- Быстрые контакты -->
-                <div class="quick-contacts">
-                    <h3 data-translate="quick-contacts-title">Быстрая связь</h3>
-                    <div class="contact-methods">
-                        <a href="tel:+380937983888" class="contact-method phone-btn">
-                            <span class="contact-icon">📞</span>
-                            <span class="contact-text">+380937983888</span>
-                        </a>
-                        
-                        <a href="viber://chat?number=%2B380937983888" class="contact-method viber-btn">
-                            <span class="contact-icon">📱</span>
-                            <span class="contact-text">Viber</span>
-                        </a>
-                        
-                        <a href="https://wa.me/+380937983888" class="contact-method whatsapp-btn" target="_blank">
-                            <span class="contact-icon">💬</span>
-                            <span class="contact-text">WhatsApp</span>
-                        </a>
-                        
-                        <a href="https://www.instagram.com/chisto_sofa?igsh=MWE5dnRyejE2NmllaQ==" class="contact-method instagram-btn" target="_blank">
-                            <span class="contact-icon">📸</span>
-                            <span class="contact-text">Instagram</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="emergency-contact">
-                    <h3 data-translate="emergency-call">Срочный звонок</h3>
-                    <a href="tel:++380937983888">+380937983888</a>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
+   
  <!-- Футер -->
 <footer class="footer">
     <div class="container">
