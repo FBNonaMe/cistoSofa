@@ -44,7 +44,10 @@ body {
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
-    transition: all 0.3s ease;
+}
+
+body {
+    padding-top: 80px; /* Отступ для контента под фиксированным хедером */
 }
 
 .nav-container {
@@ -987,9 +990,9 @@ body {
 /* Секция услуг */
 .services {
     padding: 5rem 0;
-    background: var(--primary-blue);
+    /* background: var(--primary-blue); */
+    background: url('img/нашиПослуги.png') center center/cover no-repeat;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1010,7 +1013,7 @@ body {
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: #111;
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
@@ -3055,14 +3058,26 @@ body {
     
     </div>
 
+    
     <!-- Превью услуг -->
-    <div class="service-previews">
-        <div class="service-preview" title="Генеральне прибирання" onclick="openServiceModal('general')">🏠</div>
-        <div class="service-preview" title="Хімчистка меблів" onclick="openServiceModal('furniture')">🛋️</div>
-        <div class="service-preview" title="Миття вікон" onclick="openServiceModal('windows')">🪟</div>
-        <div class="service-preview" title="Прибирання офісів" onclick="openServiceModal('office')">🏢</div>
-        <div class="service-preview" title="Після ремонту" onclick="openServiceModal('renovation')">🏗️</div>
+    <div class="service-previews" style="width:100%;overflow:hidden;">
+      <div style="
+        white-space:nowrap;
+        color:#2563eb;
+        font-size:1.5rem;
+        font-weight:bold;
+        animation: marquee 12s linear infinite;
+        display:inline-block;
+      ">
+        chisto sofa CLINING SERVICES FOR YOU
+      </div>
     </div>
+    <style>
+      @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+    </style>
 </section>
    
 <!-- Услуги -->
@@ -3786,6 +3801,12 @@ body {
             </div>
         </div>
         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <p>&copy; 2024 Chisto Sofa. © 2025 Chisto Sofa. Всі права захищені.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
             <p data-translate="footer-copyright">&copy; 2025 Chisto Sofa. Всі права захищені.</p>
         </div>
     </div>
