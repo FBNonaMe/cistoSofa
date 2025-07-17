@@ -987,7 +987,8 @@ body {
 /* Секция услуг */
 .services {
     padding: 5rem 0;
-    background: var(--primary-blue);
+    /* background: var(--primary-blue); */
+    background: url('img/нашиПослуги.png') center center/cover no-repeat;
 }
 
 .container {
@@ -1010,7 +1011,7 @@ body {
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: #111;
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
@@ -2841,7 +2842,7 @@ body {
           </button>
           <div class="language-dropdown" id="languageDropdown">
             <div class="language-option active" onclick="switchLanguage('ua')">
-              �� Русский
+              🇺🇦 Українська
             </div>
             <div class="language-option" onclick="switchLanguage('ru')">
               🇷🇺 Русский
@@ -3055,13 +3056,24 @@ body {
     </div>
 
     <!-- Превью услуг -->
-    <div class="service-previews">
-        <div class="service-preview" title="Генеральне прибирання" onclick="openServiceModal('general')">🏠</div>
-        <div class="service-preview" title="Химчистка мебели" onclick="openServiceModal('furniture')">🛋️</div>
-        <div class="service-preview" title="Мойка окон" onclick="openServiceModal('windows')">🪟</div>
-        <div class="service-preview" title="Уборка офисов" onclick="openServiceModal('office')">🏢</div>
-        <div class="service-preview" title="После ремонта" onclick="openServiceModal('renovation')">🏗️</div>
+    <div class="service-previews" style="width:100%;overflow:hidden;">
+      <div style="
+        white-space:nowrap;
+        color:#2563eb;
+        font-size:1.5rem;
+        font-weight:bold;
+        animation: marquee 12s linear infinite;
+        display:inline-block;
+      ">
+        chisto sofa CLINING SERVICES FOR YOU
+      </div>
     </div>
+    <style>
+      @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+    </style>
 </section>
    
 <!-- Услуги -->
@@ -3073,9 +3085,9 @@ body {
       <!-- 1. Генеральне прибирання -->
       <div class="service-card animate-on-scroll">
         <div class="service-icon">
-            <img src="img/генеральна.jpg" alt="Генеральне прибирання" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="img/генеральна.jpg" alt="Генеральная уборка" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <h3 data-translate="service-general">Генеральне прибирання</h3>
+        <h3 data-translate="service-general">Генеральная уборка</h3>
         <p data-translate="service-general-desc">Полная очистка всех помещений с использованием профессиональных средств и оборудования</p>
         <button class="service-more-btn" onclick="openServiceModal('general')" data-translate="service-more-btn">Подробнее</button>
       </div>
@@ -3752,7 +3764,7 @@ body {
         </div>
 
         <div class="advantages-outro">
-            <p>Мы не просто убираем — мы наводим порядок так, как это сделали бы для себя.</p>
+            <p>Для нас каждая уборка — как у себя дома. С любовью к деталям и порядку</p>
         </div>
     </div>
 </section>
